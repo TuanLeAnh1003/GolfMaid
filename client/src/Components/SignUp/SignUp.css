@@ -9,16 +9,21 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.signUp {
+.signUpWrapper {
   width: 900px;
   height:675px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #201546;
-  margin: 0 auto;
   border-radius: 30px;
-  background-image: url("../../Assets/Images/Rectangle\ 383.png");
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.signUp {
+  border-radius: 30px;
+  margin: 0 auto;
+  background-image: url("../../Assets/Images/sign-in-img.png") ;
 }
 
 .signUp button {
@@ -66,6 +71,13 @@
   font-size: 25px;
 }
 
+.signUp_form > .signUp_form-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signUp_form > .signUp_form-name > input,
 .signUp_form > input {
   width: 350px;
   height: 40px;
@@ -77,7 +89,12 @@
   outline: none;
 }
 
-.signUp_form > input::placeholder {
+.signUp_form > .signUp_form-name > input {
+  width: 45%;
+}
+
+
+.signUp_form input::placeholder {
   color: rgba(255, 255, 255, 0.56);
 }
 
@@ -139,4 +156,8 @@
   background-color: #B4624A;
   margin-left: 8px;
   color: #fff;
+}
+
+.swal2-container {
+	z-index: 10000 !important;
 }
