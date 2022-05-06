@@ -71,6 +71,22 @@
   font-size: 25px;
 }
 
+.signUp_form > select ,
+.signUp_form > select > option {
+  width: 350px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.signUp_form > select > option {
+  color: #000;
+}
+
 .signUp_form > .signUp_form-name {
   display: flex;
   align-items: center;

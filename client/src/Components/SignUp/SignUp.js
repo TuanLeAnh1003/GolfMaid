@@ -20,6 +20,7 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -70,12 +71,17 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
             {/*<input type="date" name="dob" />*/}
             <input type="email" placeholder="Email (*)" name="email" onChange={e => setEmail(e.target.value)}/>
             <input type="text" placeholder="Số điện thoại (*)" name="phone" onChange={e => setPhone(e.target.value)}/>
+            <select name="Gender" onChange={e => e.target.value}>
+              <option value="Nam" selected>Nam</option>
+              <option value="Nữ">Nữ</option>
+            </select>
             <input type="password" placeholder="Mật khẩu (*)" name="userPassword" onChange={e => setPassword(e.target.value)}/>
             <input type="password" placeholder="Nhập lại mật khẩu (*)" name="confirmPassword" 
               value={confirmPassword}
               onChange={e => setConfirmPassword(e.target.value)}
               onBlur={e => handleConfirmPassword(e.target.value)}
             />
+            
             <div className="signUp_check">
               <input type="checkbox" name="remember" />
               <label htmlFor="remember">Khách hành đồng ý với các <a href="#">điều khoản</a> thành viên của GoftMaid</label>

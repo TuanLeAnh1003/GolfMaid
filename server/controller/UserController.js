@@ -1,7 +1,6 @@
-// const bcrypt = require('bcrypt');
-// const AccountModel = require('../Models/Account');
-// const TokenModel = require('../Models/Token');
-// const jwt = require('jsonwebtoken');
+import bcrypt from 'bcrypt';
+import {UserModel} from '../Models/UserModel.js';
+import jwt from 'jsonwebtoken';
 
 
 // const login = (req, res) => {
@@ -44,37 +43,37 @@
 // }
 
 const register = (req, res) => {
-  var username = req.body.phone;
+  var phone = req.body.phone;
   var password = req.body.password;
-  console.log(req, username, password);
+  console.log(req, phone, password);
   
-  // AccountModel.find({
-  //   username: username,
-  //   password: password
-  // })
-  // .then(data => {
-  //   if(data.length !== 0) {
-  //     console.log(data);
-  //     res.send(data)
-  //   } else {
-  //     console.log(data)
-  //     var salt = 10;
-  //     bcrypt.hash(password, salt, (err, hash) => {
-  //       AccountModel.create({
-  //         username: username,
-  //         password: hash
-  //       })
-  //       .then(data => console.log(data))
-  //       .catch(err => console.log(err))
-  //     })
-  //     .then(data => console.log("hash", hash))
-  //   }
+  UserModel.find({
+    username: phone,
+    password: password
+  })
+  .then(data => {
+    if(data.length !== 0) {
+      console.log(data);
+      res.send(data)
+    } else {
+      console.log(data)
+      var salt = 10;
+      bcrypt.hash(password, salt, (err, hash) => {
+        UserModel.create({
+          phone: phone,
+          password: hash
+        })
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+      })
+      .then(data => console.log("hash", hash))
+    }
 
-  // })
-  // .catch(err => {
-  //   console.log("err", err);
-  //   res.send(err);
-  // })
+  })
+  .catch(err => {
+    console.log("err", err);
+    res.send(err);
+  })
 }
 
 // const getMe = (req, res) => {
