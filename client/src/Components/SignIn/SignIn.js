@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './SignIn.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import SignInImg from '../../Assets/Images/Rectangle 383.png';
 import Logo from '../../Assets/Images/logo.png';
 import Facebook from '../../Assets/Images/SignIn_fb.png';
 import Google from '../../Assets/Images/SignIn_gg+.png';
@@ -26,6 +25,8 @@ function SignIn({handleShowSignIn1, handleShowSignUp1}) {
   return (
     <div className="signInWrap" onClick={handleExitSignIn}>
       <div className="signIn" onClick={e => e.stopPropagation()}>
+      <div className="signInWrapper">
+
 
         <div></div>
 
@@ -58,6 +59,7 @@ function SignIn({handleShowSignIn1, handleShowSignUp1}) {
             <span>Chưa có tài khoản?</span>
             <button onClick={handleShowSignUpBySignIn}>Đăng ký</button>
           </div>
+        </div>
         </div>
       </div>
     </div>

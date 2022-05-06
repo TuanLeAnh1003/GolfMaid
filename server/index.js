@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true, limit: '30mb' }));
 app.use(cors());
 
-app.use('/users', users)
+app.use('/users', users);
 
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
