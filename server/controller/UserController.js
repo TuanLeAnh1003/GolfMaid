@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import {UserModel} from '../Models/UserModel.js';
+import {UserModel} from '../models/UserModel.js';
 import jwt from 'jsonwebtoken';
 
 

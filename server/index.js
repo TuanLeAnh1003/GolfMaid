@@ -4,6 +4,9 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 import users from './router/users.js';
+import contracts from './router/contracts.js';
+import posts from './router/posts.js';
+import comments from './router/comments.js';
 
 dotenv.config();
 
@@ -16,6 +19,9 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '30mb' }));
 app.use(cors());
 
 app.use('/users', users);
+app.use('/contracts', contracts);
+app.use('/posts', posts);
+app.use('/comments', comments);
 
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
