@@ -1,6 +1,24 @@
 import { UserModel } from "../Models/UserModel.js"
 
 export const getUsers = async (req, res) => {
+  // const user = new UserModel({
+  //   userId: 'U002',
+  //   password: '123456',
+  //   firstName: 'Công',
+  //   lastName: 'Chúa',
+  //   birthday: new Date("1967-12-22"),
+  //   phoneNumber: '0987654321',
+  //   email: 'congchuabongbong@gmail.com',
+  //   address: {
+  //     general: 'phường Linh Trung, thành phố Thủ Đức',
+  //     detail: 'KTX A - ĐHQG HCM, khu phố 6, phường Linh Trung, thành phố Thủ Đức'
+  //   },
+  //   role: 0,
+  //   gender: 'male'
+  // })
+
+  // user.save();
+
   try {
     const users = await UserModel.find()
     console.log('users', users);
