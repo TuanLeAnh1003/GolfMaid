@@ -11,7 +11,7 @@ import PostDetail from '../PostDetail';
 import ResultSearchOrder from '../ResultSearchOrder';
 import HouseHelper from '../HouseHelper';
 import Search from '../Search';
-import SearchOrder from '../SearchOrder';
+import SearchContract from '../SearchContract';
 
 function HomePage() {
   const [searchContent, setSearchContent] = useState('')
@@ -28,7 +28,7 @@ function HomePage() {
       <Route path="/househelper" element={<HouseHelper />} />
       <Route path="/househelper/:type" element={<HouseHelper />} />
       <Route path="/post-detail/:postId" element={<PostDetail />} />
-      <Route path="/search-order" element={<SearchOrder />} />
+      <Route path="/search-contract" element={<SearchContract />} />
       <Route path="/result-search-order" element={<ResultSearchOrder />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/search" element={<Search searchContent={searchContent} />} />

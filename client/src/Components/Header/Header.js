@@ -69,7 +69,7 @@ function Header({ parentSearch }) {
         <div className="header-first__more">
           <div className="header-first__more-item header-first__more-order">
             <FontAwesomeIcon icon={solid('box')} />
-            <Link to="">Tra cứu đơn hàng</Link>
+            <Link to="/search-contract">Tra cứu đơn hàng</Link>
           </div>
 
           <div className="header-first__more-item header-first__more-like">
