@@ -7,7 +7,7 @@
 
 .header-first {
   height: 50px;
-  background-color: #614F4A;
+  background-color: #39A388;
   color: #fff;
   display: flex;
   align-items: center;
@@ -32,7 +32,6 @@
 .header-first > .header-first__search,
 .header-first > .header-first__more,
 .header-first > .header-first__more > .header-first__more-item,
-.header-second,
 .header-second > .header-second__logo,
 .header-second > .header-second__nav {
   display: flex;
@@ -55,8 +54,11 @@
 }
 
 .header-second {
-  height: 125px;
-  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background-color: #96e9d4;
 }
 
 .header-second > .header-second__logo > img {
@@ -75,14 +77,15 @@
 
 .header-second > .header-second__nav {
   /* width: 50%; */
-  font-size: 28px;
+  font-size: 20px;
   list-style-type: none;
+  margin-right: 30px;
 }
 
 .header-second > .header-second__nav > a {
   padding: 0 20px;
   border-right: 1px solid rgba(113, 101, 101, 0.48);
-  font-size: 28px;
+  font-size: 20px;
   text-decoration: none;
   color: #000;
 }
@@ -106,7 +109,7 @@
   color: #855446;
 }
 
-.header-third {
+/* .header-third {
   height: 60px;
   display: flex;
   align-items: center;
@@ -122,4 +125,4 @@
 .header-third > h2,
 .header-third > svg {
   color: rgba(120, 112, 112, 0.63);
-}
+} */

@@ -9,11 +9,11 @@ function Footer() {
       <div className="footer-first">
         <div className="footer-first__wrapper">
           <div className="footer-first__icon">
-            <FontAwesomeIcon icon={solid('sack-dollar')} />
+
           </div>
 
           <ul className="footer-first__about-us">
-            <li><h2>VỀ CHÚNG TÔI</h2></li>
+            <li><h3>VỀ CHÚNG TÔI</h3></li>
             <li></li>
             <li>Giới thiệu</li>
             <li>Chi nhánh cửa hàng</li>
@@ -21,7 +21,7 @@ function Footer() {
           </ul>
 
           <ul className="footer-first__product">
-            <li><h2>SẢN PHẨM</h2></li>
+            <li><h3>SẢN PHẨM</h3></li>
             <li></li>
             <li>Đồng hồ nam</li>
             <li>Đồng hồ nữ</li>
@@ -30,7 +30,7 @@ function Footer() {
           </ul>
 
           <ul className="footer-first__help">
-            <li><h2>HỖ TRỢ</h2></li>
+            <li><h3>HỖ TRỢ</h3></li>
             <li></li>
             <li>Liên hệ</li>
             <li>Chính sách chung</li>
@@ -39,7 +39,7 @@ function Footer() {
           </ul>
 
           <ul className="footer-first__social-media">
-            <li><h2>LIÊN KẾT MẠNG XÃ HỘI</h2></li>
+            <li><h3>LIÊN KẾT MẠNG XÃ HỘI</h3></li>
             <li>
               <FontAwesomeIcon icon={brands('facebook-square')} />
               <FontAwesomeIcon icon={brands('instagram-square')} />
