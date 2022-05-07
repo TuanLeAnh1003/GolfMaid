@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import {UserModel} from '../Models/UserModel.js';
 import jwt from 'jsonwebtoken';
-
+import crypto from 'crypto';
 
 // const login = (req, res) => {
 //   var username = req.body.phone;
@@ -43,12 +43,14 @@ import jwt from 'jsonwebtoken';
 // }
 
 const register = (req, res) => {
-  var phone = req.body.phone;
+  var email = req.body.email;
   var password = req.body.password;
-  console.log(req, phone, password);
+  const id = crypto.randomBytes(3*4).toString("base64");
+
+  console.log(req, email, password);
   
   UserModel.find({
-    username: phone,
+    email: email,
     password: password
   })
   .then(data => {
@@ -60,7 +62,12 @@ const register = (req, res) => {
       var salt = 10;
       bcrypt.hash(password, salt, (err, hash) => {
         UserModel.create({
-          phone: phone,
+          userId: id,
+          firstName: req.body.firstName,
+          lastName: req.body.lastName,
+          email: email,
+          phone: req.body.phone,
+          gender: req.body.gender,
           password: hash
         })
         .then(data => console.log(data))

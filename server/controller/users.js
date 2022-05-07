@@ -2,7 +2,7 @@ import { UserModel } from "../Models/UserModel.js"
 
 export const getUsers = async (req, res) => {
   // const user = new UserModel({
-  //   userId: 'U002',
+  //   userId: 'U003',
   //   password: '123456',
   //   firstName: 'Công',
   //   lastName: 'Chúa',

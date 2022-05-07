@@ -37,10 +37,10 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
   }
 
   const handleRegister = () => {
-    if(lastName === "" || firstName === "" || email === "" || phone === "" || password === "" || confirmPassword === "") {
+    if(lastName === "" || firstName === "" || email === "" || phone === "" || password === "" || confirmPassword === "" || (gender !== "Nam" && gender !== "Nữ")) {
       alert("Trường bắt buộc còn rỗng!");
     } else {
-      console.log(lastName, firstName, email, phone, password)
+      console.log(gender)
       UserApi.register({
         lastName: lastName,
         firstName: firstName,
@@ -71,8 +71,9 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
             {/*<input type="date" name="dob" />*/}
             <input type="email" placeholder="Email (*)" name="email" onChange={e => setEmail(e.target.value)}/>
             <input type="text" placeholder="Số điện thoại (*)" name="phone" onChange={e => setPhone(e.target.value)}/>
-            <select name="Gender" onChange={e => e.target.value}>
-              <option value="Nam" selected>Nam</option>
+            <select name="Gender" value={gender} onChange={e => setGender(e.target.value)}>
+              <option value="Giới tính">-- Giới tính --</option>
+              <option value="Nam">Nam</option>
               <option value="Nữ">Nữ</option>
             </select>
             <input type="password" placeholder="Mật khẩu (*)" name="userPassword" onChange={e => setPassword(e.target.value)}/>
