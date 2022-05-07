@@ -16,7 +16,8 @@ const schema = new mongoose.Schema({
   email: { type: 'string', required: true },
   address: { type: 'object' },
   role: { type: 'bool' },
-  gender: { type: 'string', required: true}
+  gender: { type: 'string', required: true},
+  image: { type: 'string' }
 }, { timestamps: true })
 
 export const UserModel = mongoose.model('User', schema)

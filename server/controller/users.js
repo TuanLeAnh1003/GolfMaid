@@ -1,8 +1,8 @@
-import { UserModel } from "../Models/UserModel.js"
+import { UserModel } from "../models/UserModel.js"
 
 export const getUsers = async (req, res) => {
   // const user = new UserModel({
-  //   userId: 'U003',
+  //   userId: 'U001',
   //   password: '123456',
   //   firstName: 'Công',
   //   lastName: 'Chúa',
@@ -14,7 +14,8 @@ export const getUsers = async (req, res) => {
   //     detail: 'KTX A - ĐHQG HCM, khu phố 6, phường Linh Trung, thành phố Thủ Đức'
   //   },
   //   role: 0,
-  //   gender: 'male'
+  //   gender: 'male',
+  //   image: "https://via.placeholder.com/200"
   // })
 
   // user.save();
