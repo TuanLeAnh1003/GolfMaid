@@ -5,9 +5,14 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import Logo from '../../Assets/Images/logo.png';
 import Facebook from '../../Assets/Images/SignIn_fb.png';
 import Google from '../../Assets/Images/SignIn_gg+.png';
+import UserApi from '../../Apis/UserApi';
+import { useStore, action } from '../../Store/StoreContext';
 
 
 function SignIn({handleShowSignIn1, handleShowSignUp1}) {
+
+  const [state, dispatch] = useStore();
+
   const [show, setShow] = useState(false);
 
   const handleExitSignIn = () => {   
@@ -22,6 +27,26 @@ function SignIn({handleShowSignIn1, handleShowSignUp1}) {
     setShow(!show);
   }
 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogIn = () => {
+    if(email === "" || password === "") {
+      alert("Trường bắt buộc còn rỗng!");
+    } else {
+      UserApi.login({
+        email: email,
+        password: password,
+      })
+      .then(res => {
+        if(res.message) {
+          dispatch(action.login(res.token));
+        }
+      })
+      .catch(err => console.log(err))
+    }
+  }
+
   return (
     <div className="signInWrap" onClick={handleExitSignIn}>
       <div className="signIn" onClick={e => e.stopPropagation()}>
@@ -34,9 +59,9 @@ function SignIn({handleShowSignIn1, handleShowSignUp1}) {
           <FontAwesomeIcon icon={solid('circle-xmark')} onClick={handleExitSignIn}/><br />
           <img src={Logo} alt="Logo" />
           <h1>KHÁCH HÀNG ĐĂNG NHẬP</h1>
-          <input type="email" placeholder="Email hoặc số điện thoại" />
+          <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)}/>
           <div className="signIn_password">
-            <input type={show ? "text" : "password"} placeholder="Mật khẩu" />
+            <input type={show ? "text" : "password"} placeholder="Mật khẩu" value={password} onChange={e => setPassword(e.target.value)}/>
             {!show &&  <div onClick={handleEye}><FontAwesomeIcon icon={solid('eye')} /></div>}
             {show && <div onClick={handleEye}><FontAwesomeIcon icon={solid('eye-slash')} /></div>}
           </div>
@@ -44,7 +69,7 @@ function SignIn({handleShowSignIn1, handleShowSignUp1}) {
             <input type="checkbox" name="remember" />
             <label htmlFor="remember">Ghi nhớ</label>
           </div>
-          <button>Đăng nhập</button>
+          <button onClick={handleLogIn}>Đăng nhập</button>
           <a href="#">Quên mật khẩu?</a>
           <div className="signIn_method">
             <span className="line"></span>

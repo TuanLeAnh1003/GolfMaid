@@ -1,8 +1,8 @@
-import { UserModel } from "../models/UserModel.js"
+import { UserModel } from "../Models/UserModel.js"
 
 export const getUsers = async (req, res) => {
   // const user = new UserModel({
-  //   userId: 'U001',
+  //   userId: 'U005',
   //   password: '123456',
   //   firstName: 'Công',
   //   lastName: 'Chúa',

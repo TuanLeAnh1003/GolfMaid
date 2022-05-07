@@ -1,4 +1,11 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const URI = process.env.DATABASE_URL;
+
+mongoose.connect(`${URI}`);
+
 
 const schema = new mongoose.Schema({
   userId: {
@@ -18,6 +25,6 @@ const schema = new mongoose.Schema({
   role: { type: 'bool' },
   gender: { type: 'string', required: true},
   image: { type: 'string' }
-}, { timestamps: true })
+}, {collection: "users", timestamps: true})
 
 export const UserModel = mongoose.model('User', schema)

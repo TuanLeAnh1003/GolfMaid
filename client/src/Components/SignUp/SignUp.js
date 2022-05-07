@@ -46,8 +46,19 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
         firstName: firstName,
         email: email,
         phone: phone,
+        gender: gender,
         password: password,
       })
+      .then(res => {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Đăng kí thành công!',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      })
+      .catch(err => Swal.fire('Đăng kí thất bại!'))
     }
   }
 

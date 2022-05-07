@@ -4,10 +4,14 @@ import axiosInstance from "./axiosInstance";
 //   return await axiosInstance.post("/login", data);
 // };
 const register = async (data) => {
-  return await axiosInstance.post("/register", data);
+  return await axiosInstance.post("/users/register", data);
+}
+
+const login = async (data) => {
+  return await axiosInstance.post("/users/login", data)
 }
 
 export default {
-  // login,
+  login,
   register,
 }
