@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import watch from '../../Assets/Images/image 1.png';
+import logo from '../../Assets/Images/lo-go.png';
 import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
 import AdminSignIn from '../AdminSignIn/AdminSignIn';
@@ -52,7 +52,7 @@ function Header() {
       <div className="header-first">
         <div className="header-first__search">
           <FontAwesomeIcon icon={solid('magnifying-glass')} />
-          <input type="text" placeholder="Tìm sản phẩm..." />
+          <input type="text" placeholder="Tìm người giúp việc..." />
         </div>
 
         <div className="header-first__more">
@@ -80,31 +80,16 @@ function Header() {
 
       <div className="header-second">
         <Link to="/" className="header-second__logo">
-          <img src={watch} alt="watch" />
-          <div>
-            <h1>UITWatch</h1>
-            <span>SINCE 2021</span>
-          </div>
+          <img src={logo} alt="watch" />
         </Link>
 
         <ul className="header-second__nav">
           <Link to="">GIỚI THIỆU</Link>
-          <Link to="/sale">ĐỒNG HỒ</Link>
-          <Link to="/saleoff">SALE OFF</Link>
-          <Link to="/news">TIN TỨC</Link>
+          <Link to="/sale">NGƯỜI GIÚP VIỆC</Link>
+          <Link to="/saleoff">NGƯỜI THUÊ</Link>
           <Link to="/contact">LIÊN HỆ</Link>
-          <Link to="/policy">CHÍNH SÁCH</Link>
+
         </ul>
-
-        <Link to="/cart" className="header-second__cart">
-          <FontAwesomeIcon icon={solid('cart-shopping')}/>
-        </Link>
-      </div>
-
-      <div className="header-third">
-        <FontAwesomeIcon icon={solid('angle-left')} />
-        <h2>FREE SHIP VỚI HÓA ĐƠN TỪ 800K</h2>
-        <FontAwesomeIcon icon={solid('angle-right')} />
       </div>
 
       {isSignInShowed && <SignIn handleShowSignIn1={childShowSignIn1} handleShowSignUp1={childShowSignUp1}/>} 

@@ -6,6 +6,7 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import UserApi from '../../Apis/UserApi';
 import SweetAlert from 'sweetalert2-react';
 import Swal from "sweetalert2";
+import validator from 'validator';
 
 function SignUp({handleShowSignUp2, handleShowSignIn2}) {
   const handleExitSignUp = () => {   
@@ -24,6 +25,8 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  const [isValidEmail, setIsValidEmail] = useState(true);
+
   const handleConfirmPassword = (confirmPass) => {
     if(confirmPass !== password) {
       setConfirmPassword("");
@@ -36,9 +39,15 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
     }
   }
 
+  const checkMail = (a) => {
+    validator.isEmail(a) ? setIsValidEmail(true) : setIsValidEmail(false);
+  }
+
   const handleRegister = () => {
     if(lastName === "" || firstName === "" || email === "" || phone === "" || password === "" || confirmPassword === "" || (gender !== "Nam" && gender !== "Nữ")) {
       alert("Trường bắt buộc còn rỗng!");
+    } else if(isValidEmail === false) {
+      return;
     } else {
       console.log(gender)
       UserApi.register({
@@ -80,7 +89,8 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
             </div>
             
             {/*<input type="date" name="dob" />*/}
-            <input type="email" placeholder="Email (*)" name="email" onChange={e => setEmail(e.target.value)}/>
+            <input type="email" placeholder="Email (*)" name="email" onChange={e => setEmail(e.target.value)} onBlur={e => checkMail(e.target.value)}/>
+            {isValidEmail ? "" : <h4 style={{color: "red", fontStyle: 'italic'}}>Email không hợp lệ!</h4>}
             <input type="text" placeholder="Số điện thoại (*)" name="phone" onChange={e => setPhone(e.target.value)}/>
             <select name="Gender" value={gender} onChange={e => setGender(e.target.value)}>
               <option value="Giới tính">-- Giới tính --</option>

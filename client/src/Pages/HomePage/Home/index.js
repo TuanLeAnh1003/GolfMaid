@@ -2,14 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import watchImg from './../../../Assets/Images/Rectangle 5.png';
+import bigImg from './../../../Assets/Images/big-img.png';
 import Advertisement from '../../../Components/Advertisement';
-import adImg1 from './../../../Assets/Images/Rectangle 6.png';
-import adImg2 from './../../../Assets/Images/Rectangle 7.png';
+import adImg1 from './../../../Assets/Images/ad-img-1.png';
+import adImg2 from './../../../Assets/Images/ad-img-2.png';
 import List from '../../../Components/List';
-import listImg1 from './../../../Assets/Images/Rectangle 8.png';
-import listImg2 from './../../../Assets/Images/Rectangle 9.png';
-import listImg3 from './../../../Assets/Images/Rectangle 10.png';
+import listImg1 from './../../../Assets/Images/list-img-1.png';
+import listImg2 from './../../../Assets/Images/list-img-2.png';
+import listImg3 from './../../../Assets/Images/list-img-3.png';
 import Product from '../../../Components/Product';
 import pro1 from './../../../Assets/Images/Rectangle 11.png';
 import ContactItem from '../../../Components/ContactItem/index';
@@ -18,7 +18,7 @@ import newsItemImg2 from './../../../Assets/Images/news-item-2.svg';
 import newsItemImg3 from './../../../Assets/Images/news-item-3.svg';
 import newsItemImg4 from './../../../Assets/Images/news-item-4.svg';
 import NewsItem from '../../../Components/NewsItem';
-import poster from './../../../Assets/Images/image 2.png';
+import bigImg2 from './../../../Assets/Images/big-img-2.png';
 
 const productList = [{
   img: pro1,
@@ -98,23 +98,23 @@ const contactList = [
 const newsList = [
   {
     img: newsItemImg1,
-    title: "Phillipe Auguste",
-    desc: "Phillipe Auguste mang phong cách cổ điển, sang trọng với những thiết kế đồng hồ dành riêng cho thị trường. Mức giá vô cùng hợp lý...."
+    title: "Tìm người quét dọn",
+    desc: "Tôi hiện đang sống ở một mình và thường xuyên về nhà chiều muộn nên nhà cửa lúc nào cũng bụi bặm. Vì thế nên cần một người giúp việc... "
   },
   {
     img: newsItemImg2,
-    title: "EPOS - Thụy Sĩ",
-    desc: "Epos nằm trong trong top 10 hãng đồng hồ độc lập uy tín nhất trong ngành đồng hồ Thụy Sĩ. Những chiếc đồng hồ được sản xuất..."
+    title: "Tìm người phụ quán",
+    desc: "Gia đình tôi vừa mới vay vốn và mở được một cửa hàng quần áo nhỏ. Nên tôi cần tuyển một người phụ giúp trông coi cửa hàng. Yêu cầu:..."
   },
   {
     img: newsItemImg3,
-    title: "Aries Gold",
-    desc: "Các sản phẩm của hãng luôn hướng đến phong cách, thời trang và xu hướng mới nhất của thế giới với giá cả hợp lý..."
+    title: "Tìm người chăm em...",
+    desc: "Vợ tôi vừa mới sinh đôi vào cuối năm ngoái, đến nay thì cũng gần được nửa năm, cô ấy sắp phải đi làm lại ở công ty. Do vậy nên tôi cần một..."
   },
   {
     img: newsItemImg4,
-    title: "Stuhrling Original",
-    desc: "Chiếc đồng hồ cơ với các chi tiết phức tạp luôn là niềm đam mê của những ai yêu đồng hồ. Một bộ máy cơ khí thường có 5 bộ phận..."
+    title: "6 cách giữ nhà sạch",
+    desc: "Bạn quá bận rộn với công việc và không có nhiều thời gian dọn dẹp nhà cửa? Bạn muốn giữ cho không gian nhà ở của mình luôn sạch sẽ..."
   }
 ]
 
@@ -145,51 +145,51 @@ function Home() {
 
   return (
     <div className="home">
-      <img src={watchImg} alt="watch-img" />
+      <img src={bigImg} alt="big-img" />
       <div className="home__ads">
         <Advertisement 
           img={adImg1}
-          title="MẪU ĐỒNG HỒ ĐIỆP VIÊN"
-          des="Omega Seamaster đồng hành cùng nhân vật James Bond trong nhiều phần phim. Thiết bị là một trong những sản phẩm bán chạy nhất của thương hiệu."
+          title="TÌM  NGƯỜI CHĂM EM BÉ"
+          des="Vợ tôi vừa mới sinh đôi vào cuối năm ngoái, đến nay thì cũng gần được nửa năm, cô ấy sắp phải đi làm lại ở công ty. Do vậy nên tôi cần 1 người giúp việc có thể chăm sóc 2 bé nhà tôi. Bên cạnh đó thì nhà tôi cần có thêm một người nữa để có thể quét dọn nhà cửa, giặt đồ, phơi đồ."
         />
 
         <Advertisement 
           img={adImg2}
-          title="BLACK FRIDAY"
-          des="Nhân sự kiện Black Friday, UITWatch giảm giá đến 50% cho toàn bộ sản phẩm tại hệ thống, mang đến cho khách hàng cơ hội sở hữu những món đồ hiệu với mức giá hấp dẫn."
+          title="TÌM NGƯỜI PHỤ QUÁN"
+          des="Gia đình tôi vừa mới vay vốn và mở được một cửa hàng quần áo nhỏ. Nên tôi cần tuyển một người phụ giúp trông coi cửa hàng. Yêu cầu: chăm chỉ, thật thà, nhanh nhẹn."
         />
       </div>
 
-      {/* DANH MỤC MUA HÀNG */}
-      <h1>DANH MỤC MUA HÀNG</h1>
+      {/* DỊCH VỤ */}
+      <h1>DỊCH VỤ VỦA CHÚNG TÔI</h1>
       <div className="home__lists">
         <List 
           img={listImg1}
-          title="Đồng hồ nam"
+          title="Giúp việc nam"
           list={{
-            item1: "Màu mới",
-            item2: "Bán chạy",
-            item3: "Ưu đãi",
+            item1: "Lĩnh vực",
+            item2: "Địa điểm",
+            item3: "Mức lương",
           }}
         />
 
         <List 
           img={listImg2}
-          title="Đồng hồ nữ"
+          title="Giúp việc nữ"
           list={{
-            item1: "Màu mới",
-            item2: "Bán chạy",
-            item3: "Ưu đãi",
+            item1: "Lĩnh vực",
+            item2: "Địa điểm",
+            item3: "Mức lương",
           }}
         />
 
         <List 
           img={listImg3}
-          title="Dòng sản phẩm"
+          title="Tìm giúp việc"
           list={{
-            item1: "Casio",
-            item2: "Rolex",
-            item3: "Daniel Wellington",
+            item1: "Lĩnh vực",
+            item2: "Địa điểm",
+            item3: "Mức lương",
           }}
         />
       </div>
@@ -226,7 +226,7 @@ function Home() {
         <FontAwesomeIcon icon={solid('angle-right')} onClick={handleRightClick}/>
       </div>
 
-      <img src={poster} alt="image-poster" style={{margin: "20px 0"}}/>
+      <img src={bigImg2} alt="image-poster" style={{margin: "20px 0"}}/>
 
       <div className="home__bottom">
         <div className="home__bottom-contact">
