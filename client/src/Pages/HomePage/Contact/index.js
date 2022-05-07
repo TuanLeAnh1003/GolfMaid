@@ -46,12 +46,10 @@ function Contact() {
 		<div className='contact'>
 			<div className='contact-image'>
 				<div className='contact-image-title'>LIÊN HỆ NGAY</div>
-				<div className='contact-image-line'></div>
 				<div className='contact-image-content'>
-					Ở UITWatch - nơi giá trị thật sự không chỉ nằm trong những chiếc đồng
-					hồ. Chúng tôi nâng tầm sản phẩm của mình bằng sự quan tâm đặc biệt đối
-					với khách hàng. UITWatch đặt lợi ích và dịch vụ khách hàng lên hàng
-					đầu.
+				<p>Ở Golf Maid - nơi giá trị thật sự không chỉ nằm trong những chiếc đồng hồ. Chúng tôi nâng tầm 
+				sản phẩm của mình bằng sự quan tâm đặc biệt đối với khách hàng. Golf Maid đặt lợi ích và dịch 
+				vụ khách hàng lên hàng đầu.</p>
 				</div>
 			</div>
 
@@ -59,7 +57,7 @@ function Contact() {
 				<div className='contact-body-left'>
 					<div className='contact-body-left-title'>THÔNG TIN LIÊN LẠC</div>
 					<div className='contact-body-left-desc'>
-						Nếu bạn có bất kì phản hồi gì về đồng hồ tại UITWatch, hãy liên
+						Nếu bạn có bất kì phản hồi gì về đồng hồ tại GolfMaid, hãy liên
 						hệ ở các thông tin bên dưới:
 					</div>
 					<div className='contact-body-left-list'>
@@ -73,6 +71,7 @@ function Contact() {
 						))}
 					</div>
 				</div>
+				<div className="contact-body-line"></div>
 				<div className='contact-body-right'>
 					<div className='contact-body-right-title'>LIÊN HỆ VỚI CHÚNG TÔI</div>
 					<div className="contact-body-right-desc">Gửi ngay thông tin phản hồi sớm nhất cho chúng tôi:</div>
@@ -90,7 +89,7 @@ function Contact() {
 				</div>
 			</div>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8972087331563!2d106.68827161462293!3d10.819177892292483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ef05b21115%3A0x95a90a3c2fdeae3d!2zNjQsIDE1IE5ndXnDqm4gSOG7k25nLCBQaMaw4budbmcgMSwgR8OyIFbhuqVwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmggMDcwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1649698866760!5m2!1svi!2s" style={{width: "100%", height: "600px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="address"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8972087331563!2d106.68827161462293!3d10.819177892292483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ef05b21115%3A0x95a90a3c2fdeae3d!2zNjQsIDE1IE5ndXnDqm4gSOG7k25nLCBQaMaw4budbmcgMSwgR8OyIFbhuqVwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmggMDcwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1649698866760!5m2!1svi!2s" style={{width: "100%", height: "600px"}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="address"></iframe>
 		</div>
 	);
 }

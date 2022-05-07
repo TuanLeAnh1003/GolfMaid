@@ -11,7 +11,7 @@ import PostDetail from '../PostDetail';
 import ResultSearchOrder from '../ResultSearchOrder';
 import HouseHelper from '../HouseHelper';
 import Search from '../Search';
-import SearchOrder from '../SearchOrder';
+import SearchContract from '../SearchContract';
 
 function HomePage() {
   return (
@@ -21,7 +21,7 @@ function HomePage() {
       <Route path="/" element={<Home />} />
       <Route path="/househelper/:type" element={<HouseHelper />} />
       <Route path="/product" element={<PostDetail brand="Rolex" type="Rolex bạc"/>} />
-      <Route path="/search-order" element={<SearchOrder />} />
+      <Route path="/search-contract" element={<SearchContract />} />
       <Route path="/result-search-order" element={<ResultSearchOrder />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/search" element={<Search />} />
