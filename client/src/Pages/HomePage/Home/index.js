@@ -10,7 +10,7 @@ import List from '../../../Components/List';
 import listImg1 from './../../../Assets/Images/Rectangle 8.png';
 import listImg2 from './../../../Assets/Images/Rectangle 9.png';
 import listImg3 from './../../../Assets/Images/Rectangle 10.png';
-import Product from '../../../Components/Product';
+import Post from '../../../Components/Post';
 import pro1 from './../../../Assets/Images/Rectangle 11.png';
 import ContactItem from '../../../Components/ContactItem/index';
 import newsItemImg1 from './../../../Assets/Images/news-item-1.svg';
@@ -209,7 +209,7 @@ function Home() {
               <li key={index}>
                 <div className="home__product-frame">
                   <div className="home__product">
-                    <Product 
+                    <Post 
                       ref={product}
                       img={item.img}
                       name={item.name}

@@ -15,7 +15,7 @@
 .sale__category-item-title {
   font-weight: bold;
   font-size: 25px;
-  color: #A35D49;
+  color: #F9975D;
   margin-bottom: 10px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .sale__category-item-content:hover {
-  color: #A35D49;
+  color: rgb(152, 96, 0);
   opacity: 1;
   font-weight: bold;
 }

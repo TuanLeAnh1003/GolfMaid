@@ -5,7 +5,7 @@ import smallImg from './../../../Assets/Images/Rectangle 49.png';
 import pro1 from './../../../Assets/Images/Rectangle 11.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import Product from '../../../Components/Product';
+import Post from '../../../Components/Post';
 
 function ProductDetail({brand, type}) {
 
@@ -377,7 +377,7 @@ function ProductDetail({brand, type}) {
                 <li key={index}>
                   <div className="pro-detail__product-frame">
                     <div className="pro-detail__product">
-                      <Product
+                      <Post
                         ref={product1}
                         img={item.img}
                         name={item.name}
@@ -409,7 +409,7 @@ function ProductDetail({brand, type}) {
                 <li key={index}>
                   <div className="pro-detail__product-frame">
                     <div className="pro-detail__product">
-                      <Product 
+                      <Post 
                         ref={product2}
                         img={item.img}
                         name={item.name}

@@ -2,12 +2,13 @@ import { PostModel } from "../Models/PostModel.js"
 
 export const getPosts = async (req, res) => {
   // const post = new PostModel({
-  //   postId: 'P001',
+  //   postId: 'P002',
   //   author: 'U041',
   //   detail: {
   //     expertise: ['Vệ sinh nhà cửa', 'Chăm con cái'],
   //     advantage: 'Khỏe mạnh, thật thà, nhanh nhẹn',
-  //     experience: '1 năm'
+  //     experience: '1 năm',
+  //     workplace: 'cá nhân'
   //   },
   //   price: 5000000,
   //   content: '',

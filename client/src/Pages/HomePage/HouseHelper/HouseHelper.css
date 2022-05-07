@@ -1,4 +1,4 @@
-.sale {
+.findHousehelper {
   max-width: 1300px;
   display: flex;
   justify-content: space-between;
@@ -7,13 +7,13 @@
   /* height: 1000px; */
 }
 
-.sale__category {
+.findHousehelper__category {
   width: 320px;
   /* height: 100vh; */
   /* background-color: red; */
 }
 
-.sale__category-gender {
+.findHousehelper__category-gender {
   padding: 20px;
   padding-bottom: 0;
   display: flex;
@@ -21,38 +21,38 @@
   justify-content: space-between;
 }
 
-.sale__category-gender-item {
+.findHousehelper__category-gender-item {
   text-decoration: none;
   font-size: 28px;
   color: #C4C4C4;
   opacity: 0.7;
 }
 
-.sale__category-gender-item:hover {
+.findHousehelper__category-gender-item:hover {
   opacity: 1;
   font-weight: bold;
 }
 
-.sale__category-gender-item--active {
+.findHousehelper__category-gender-item--active {
   color: #000000;
   font-weight: bold;
 }
 
-.sale__category-gender-line {
+.findHousehelper__category-gender-line {
   width: 1px;
   height: 35px;
   background-color: #C4C4C4;
   opacity: 0.95;
 }
 
-.sale__category-line {
+.findHousehelper__category-line {
   height: 1px;
   width: 100%;
   background-color: #676363;
   margin: 20px 0;
 }
 
-.sale__category-type {
+.findHousehelper__category-type {
   padding-left: 20px;
   display: inline-block;
   flex-wrap: wrap;
@@ -61,7 +61,7 @@
   text-decoration: none;
 }
 
-.sale__category-type-clock {
+.findHousehelper__category-type-find {
   text-decoration: none;
   color: #000000;
   display: inline-block;
@@ -69,51 +69,59 @@
   opacity: 0.7;
 }
 
-.sale__category-type-clock:hover {
+.findHousehelper__category-type-find:hover {
   opacity: 1;
   font-weight: bold;
+  color: rgb(152, 96, 0);
 }
 
-.sale__category-type-accessory {
+.findHousehelper__category-type-list {
   text-decoration: none;
   opacity: 0.7;
   color: #000000;
 }
 
-.sale__category-type-accessory:hover {
+.findHousehelper__category-type-list:hover {
   opacity: 1;
   font-weight: bold;
+  color: rgb(152, 96, 0);
 }
 
-.sale__category-element {
+.findHousehelper__category-element {
 
 }
 
 
-.sale__product {
+.findHousehelper__family {
   width: 950px;
   height: 100%;
   /* background-color: blue; */
 }
 
-.sale__product-img {
+.findHousehelper__family-img {
   width: 100%;
 }
 
-.sale__product-img--main {
+.findHousehelper__family-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.findHousehelper__family-img--main {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
 
-.sale__product-list {
+.findHousehelper__family-list {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.sale__product-list-item {
+.findHousehelper__family-list-item {
   width: 292px;
 }
 

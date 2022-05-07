@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from '../../../Components/Product'
+import Post from '../../../Components/Post'
 import RolexImg from './../../../Assets/Images/rolex-img.svg'
 import './Search.css'
 
@@ -84,7 +84,7 @@ function Search() {
         {
           productList.map((product, index) => (
             <div className="search-list-item">
-              <Product 
+              <Post 
                 key={index} 
                 img={product.img}
                 name={product.name}
