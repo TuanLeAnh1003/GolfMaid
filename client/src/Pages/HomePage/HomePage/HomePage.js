@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
@@ -14,17 +14,24 @@ import Search from '../Search';
 import SearchOrder from '../SearchOrder';
 
 function HomePage() {
+  const [searchContent, setSearchContent] = useState('')
+
+  const parentSearch = (searchInput) => {
+    setSearchContent(searchInput);
+  }
+
   return (
     <div>
-    <Header />
+    <Header parentSearch={parentSearch} />
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/househelper" element={<HouseHelper />} />
       <Route path="/househelper/:type" element={<HouseHelper />} />
-      <Route path="/product" element={<PostDetail brand="Rolex" type="Rolex bạc"/>} />
+      <Route path="/post-detail/:postId" element={<PostDetail />} />
       <Route path="/search-order" element={<SearchOrder />} />
       <Route path="/result-search-order" element={<ResultSearchOrder />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/search" element={<Search />} />
+      <Route path="/search" element={<Search searchContent={searchContent} />} />
       <Route path="/policy" element={<Policy />} />
       <Route path="/account/:id" element={<Account />} />
       <Route path="/about" element={<About />} />

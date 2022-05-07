@@ -35,81 +35,94 @@ function HouseHelper() {
   ]
 
   const familyList = [{
+    id: "P001",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P002",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P003",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P004",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P005",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P006",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P007",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P008",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P009",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P010",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P011",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P012",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }, {
+    id: "P013",
     img: FamilyImage,
     name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
+    workplace: "Gia đình",
     price: "7.000.000đ",
     generalAddress: "TP Hồ Chí Minh"
   }]
@@ -118,56 +131,56 @@ function HouseHelper() {
     {
       img: HouseHelperImage,
       name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
+      workplace: "Gia đình, cá nhân, công ty",
       price: "7.500.000đ",
       generalAddress: "TP Hồ Chí Minh"
     },
     {
       img: HouseHelperImage,
       name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
+      workplace: "Gia đình, cá nhân, công ty",
       price: "7.500.000đ",
       generalAddress: "TP Hồ Chí Minh"
     },
     {
       img: HouseHelperImage,
       name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
+      workplace: "Gia đình, cá nhân, công ty",
       price: "7.500.000đ",
       generalAddress: "TP Hồ Chí Minh"
     },
     {
       img: HouseHelperImage,
       name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
+      workplace: "Gia đình, cá nhân, công ty",
       price: "7.500.000đ",
       generalAddress: "TP Hồ Chí Minh"
     },
     {
       img: HouseHelperImage,
       name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
+      workplace: "Gia đình, cá nhân, công ty",
       price: "7.500.000đ",
       generalAddress: "TP Hồ Chí Minh"
     },
     {
       img: HouseHelperImage,
       name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
+      workplace: "Gia đình, cá nhân, công ty",
       price: "7.500.000đ",
       generalAddress: "TP Hồ Chí Minh"
     },
     {
       img: HouseHelperImage,
       name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
+      workplace: "Gia đình, cá nhân, công ty",
       price: "7.500.000đ",
       generalAddress: "TP Hồ Chí Minh"
     },
     {
       img: HouseHelperImage,
       name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
+      workplace: "Gia đình, cá nhân, công ty",
       price: "7.500.000đ",
       generalAddress: "TP Hồ Chí Minh"
     }
@@ -177,9 +190,9 @@ function HouseHelper() {
     <div className="findHousehelper">
       <div className="findHousehelper__category">
         <div className="findHousehelper__category-gender">
-          <a href="/" className="findHousehelper__category-gender-item findHousehelper__category-gender-item--active">
+          <Link to='/househelper' className="findHousehelper__category-gender-item findHousehelper__category-gender-item--active">
             TẤT CẢ
-          </a>
+          </Link>
         </div>
 
         <div className="findHousehelper__category-line"></div>
@@ -212,15 +225,16 @@ function HouseHelper() {
               <div className="findHousehelper__family-list">
                 {
                   familyList.map((element, index) => (
-                    <div key={index} className="findHousehelper__family-list-item">
+                    <Link to={`/post-detail/${element.id}`} key={index} className="findHousehelper__family-list-item">
                       <Post
                         img= {element.img}
                         name= {element.name}
+                        workplace= {element.workplace}
                         type= {element.type}
                         price= {element.price}
                         address= {element.generalAddress}
                       ></Post>
-                    </div>
+                    </Link>
                   ))
                 }
               </div>
@@ -239,6 +253,7 @@ function HouseHelper() {
                         img= {element.img}
                         name= {element.name}
                         type= {element.type}
+                        workplace= {element.workplace}
                         price= {element.price}
                         address= {element.generalAddress}
                       ></Post>

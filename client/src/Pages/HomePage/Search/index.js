@@ -1,103 +1,211 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Post from '../../../Components/Post'
-import RolexImg from './../../../Assets/Images/rolex-img.svg'
+import HouseHelperImage from './../../../Assets/Images/house-helper.svg'
+import FamilyImage from './../../../Assets/Images/family-image.svg';
+import { Link } from 'react-router-dom'
+
 import './Search.css'
 
-function Search() {
-  const productList = [{
-    img: RolexImg,
-    name: "Rolex Oyster Perpetual",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+function Search({searchContent}) {
+  const [type, setType] = useState(0)
+  const houseHelperList = [
+    {
+      img: HouseHelperImage,
+      name: "Nữ giúp việc - Lê Anh Tuấn",
+      type: "Gia đình, cá nhân, công ty",
+      price: "7.500.000đ",
+      generalAddress: "TP Hồ Chí Minh"
+    },
+    {
+      img: HouseHelperImage,
+      name: "Nữ giúp việc - Lê Anh Tuấn",
+      type: "Gia đình, cá nhân, công ty",
+      price: "7.500.000đ",
+      generalAddress: "TP Hồ Chí Minh"
+    },
+    {
+      img: HouseHelperImage,
+      name: "Nữ giúp việc - Lê Anh Tuấn",
+      type: "Gia đình, cá nhân, công ty",
+      price: "7.500.000đ",
+      generalAddress: "TP Hồ Chí Minh"
+    },
+    {
+      img: HouseHelperImage,
+      name: "Nữ giúp việc - Lê Anh Tuấn",
+      type: "Gia đình, cá nhân, công ty",
+      price: "7.500.000đ",
+      generalAddress: "TP Hồ Chí Minh"
+    },
+    {
+      img: HouseHelperImage,
+      name: "Nữ giúp việc - Lê Anh Tuấn",
+      type: "Gia đình, cá nhân, công ty",
+      price: "7.500.000đ",
+      generalAddress: "TP Hồ Chí Minh"
+    },
+    {
+      img: HouseHelperImage,
+      name: "Nữ giúp việc - Lê Anh Tuấn",
+      type: "Gia đình, cá nhân, công ty",
+      price: "7.500.000đ",
+      generalAddress: "TP Hồ Chí Minh"
+    },
+    {
+      img: HouseHelperImage,
+      name: "Nữ giúp việc - Lê Anh Tuấn",
+      type: "Gia đình, cá nhân, công ty",
+      price: "7.500.000đ",
+      generalAddress: "TP Hồ Chí Minh"
+    },
+    {
+      img: HouseHelperImage,
+      name: "Nữ giúp việc - Lê Anh Tuấn",
+      type: "Gia đình, cá nhân, công ty",
+      price: "7.500.000đ",
+      generalAddress: "TP Hồ Chí Minh"
+    }
+  ]
+
+  const familyList = [{
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }, {
-    img: RolexImg,
-    name: "Rolex Oyster ",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }, {
-    img: RolexImg,
-    name: "Rolex Oyster ",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }, {
-    img: RolexImg,
-    name: "Rolex Oyster ",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }, {
-    img: RolexImg,
-    name: "Rolex Oyster ",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }, {
-    img: RolexImg,
-    name: "Rolex Oyster ",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }, {
-    img: RolexImg,
-    name: "Rolex Oyster ",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }, {
-    img: RolexImg,
-    name: "Rolex Oyster ",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }, {
-    img: RolexImg,
-    name: "Rolex Oyster ",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }, {
-    img: RolexImg,
-    name: "Rolex Oyster ",
-    type: ["silver", "bronze"],
-    price: "165.000.000 VNĐ",
-    discount: "132.000.000 VNĐ"
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
+  }, {
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
+  }, {
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
+  }, {
+    img: FamilyImage,
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    type: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh"
   }]
 
   return (
     <div className="search">
-      <div className="search-title">TÌM THẤY {productList.length} KẾT QUẢ CHO "{"Rolex"}"</div>
       <div className="search-cate">
         <div className="search-cate-product">
-          <input className="search-cate-product-input" type="checkbox" id="product" checked/>
-          <label className="search-cate-product-label">Sản phẩm</label>
+          <input className="search-cate-product-input" type="radio" name="type" id="product" onClick={e => setType(0)} checked/>
+          <label className="search-cate-product-label">Tìm kiếm công việc</label>
         </div>
         <div className="search-cate-post">
-          <input className="search-cate-post-input" type="checkbox" id="post"/>
-          <label className="search-cate-post-label">Bài viết</label>
+          <input className="search-cate-post-input" type="radio" name="type" id="post" onClick={e => setType(1)}/>
+          <label className="search-cate-post-label">Tìm người giúp việc</label>
         </div>
       </div>
 
-      <div className="search-list">
-        {
-          productList.map((product, index) => (
-            <div className="search-list-item">
-              <Post 
-                key={index} 
-                img={product.img}
-                name={product.name}
-                type={product.type}
-                price={product.price}
-                discount={product.discount}
-              />
+      {
+        type === 0 ? (
+          <>
+            <div className="search-title">TÌM THẤY {familyList.length} KẾT QUẢ CHO {searchContent}</div>
+            <div className="search-list">
+              {
+                familyList.map((element, index) => (
+                  <div className="search-list-item">
+                    <Post 
+                      key={index} 
+                      img={element.img}
+                      name={element.name}
+                      type={element.type}
+                      price={element.price}
+                      address= {element.generalAddress}
+                    />
+                  </div>
+                ))
+              }
             </div>
-          ))
-        }
-      </div>
+          </>
+        ) : (
+          <>
+            <div className="search-title">TÌM THẤY {houseHelperList.length} KẾT QUẢ CHO {searchContent}</div>
+            <div className="search-list">
+              {
+                houseHelperList.map((element, index) => (
+                  <div className="search-list-item">
+                    <Post 
+                      key={index} 
+                      img={element.img}
+                      name={element.name}
+                      type={element.type}
+                      price={element.price}
+                      address= {element.generalAddress}
+                    />
+                  </div>
+                ))
+              }
+            </div>
+          </>
+        )
+      }
+        
 
-      <button className="search-view-all">XEM TẤT CẢ SẢN PHẨM</button>
+      <Link to='/househelper' className="search-view-all">XEM TẤT CẢ BÀI KHÁC</Link>
     </div>
   )
 }

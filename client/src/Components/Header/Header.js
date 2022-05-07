@@ -8,10 +8,11 @@ import SignUp from '../SignUp/SignUp';
 import AdminSignIn from '../AdminSignIn/AdminSignIn';
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ parentSearch }) {
   const [isSignInShowed, setIsSignInShowed] = useState(false);
   const [isSignUpShowed, setIsSignUpShowed] = useState(false);
   const [isAdminSignInShowed, setIsAdminSignInShowed] = useState(false);
+  const [searchInput, setSearchInput] = useState('');
 
   const handleShowSignIn = () => {
     setIsSignInShowed(true);
@@ -47,12 +48,22 @@ function Header() {
     setIsAdminSignInShowed(a);
   }
 
+  const handleClickSearch = () => {
+    parentSearch(searchInput)
+  }
+
   return (
     <div className="header">
       <div className="header-first">
         <div className="header-first__search">
-          <FontAwesomeIcon icon={solid('magnifying-glass')} />
-          <input type="text" placeholder="Tìm người giúp việc..." />
+          <input type="text" placeholder="Tìm người giúp việc..." onChange={e => setSearchInput(e.target.value)}/>
+          {
+            searchInput && (
+              <Link to='/search'>
+                <FontAwesomeIcon icon={solid('magnifying-glass')} onClick={handleClickSearch}/>
+              </Link>
+            )
+          }
         </div>
 
         <div className="header-first__more">
