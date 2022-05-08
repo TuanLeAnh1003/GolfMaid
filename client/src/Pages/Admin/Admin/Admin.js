@@ -11,7 +11,7 @@ import UserUpdate from '../UserManagement/UserUpdate';
 import AdminSideBar from './../../../Components/AdminSideBar/AdminSideBar';
 import AdminFooter from './../../../Components/Footer/AdminFooter';
 import AdminHeader from './../../../Components/Header/AdminHeader';
-import ContractManagement from '../ContractManagement';
+import ContractManagement from '../ContractManagement/index';
 import ContractCreate from '../ContractManagement/ContractCreate';
 import ContractUpdate from '../ContractManagement/ContractUpdate';
 

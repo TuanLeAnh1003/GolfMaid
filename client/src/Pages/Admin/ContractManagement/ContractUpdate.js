@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FamilyImage from "./../../../Assets/Images/family-image.svg";
 
-function NewsUpdate() {
+function ContractUpdate() {
   const [image, setImage] = useState();
 
   const contract = {
@@ -72,4 +72,4 @@ function NewsUpdate() {
   );
 }
 
-export default NewsUpdate;
+export default ContractUpdate;

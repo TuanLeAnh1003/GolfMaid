@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 
-function NewsCreate() {
+function ContractCreate() {
   const [type, setType] = useState("");
   const [image, setImage] = useState();
   console.log(image);
@@ -65,4 +65,4 @@ function NewsCreate() {
   );
 }
 
-export default NewsCreate;
+export default ContractCreate;
