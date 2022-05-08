@@ -3,32 +3,167 @@ import './NewsManagement.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { Link } from 'react-router-dom'
+import FamilyImage from "./../../../Assets/Images/family-image.svg";
+import HouseHelperImage from "./../../../Assets/Images/house-helper.svg";
 
 function NewsManagement() {
   const [hideDeletePopup, setHideDeletePopup] = useState(false)
 
-  const listNews = [
+  const postList = [
     {
-      title: "Phillipe Auguste",
-      subHeader: "Phillipe Auguste mang phong cách cổ điển, sang trọng với những thiết kế đồng hồ dành riêng cho thị trường. Mức giá vô cùng hợp lý...",
-      author: "Duy An",
-      content: "Bắt nguồn từ câu chuyện về hoàng đế Philippe Auguste (Philipe II) - Quốc vương đầu tiên của nước Pháp với tham vọng gây dựng... Bắt nguồn từ câu chuyện về hoàng đế Philippe Auguste (Philipe II) - Quốc vương đầu tiên của nước Pháp với tham vọng gây dựng...",
-      datetime: "31/03/2022 lúc 10:43 chiều"
+      id: "P001",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
     },
     {
-      title: "Phillipe Auguste",
-      subHeader: "Phillipe Auguste mang phong cách cổ điển, sang trọng với những thiết kế đồng hồ dành riêng cho thị trường. Mức giá vô cùng hợp lý...",
-      author: "Duy An",
-      content: "Bắt nguồn từ câu chuyện về hoàng đế Philippe Auguste (Philipe II) - Quốc vương đầu tiên của nước Pháp với tham vọng gây dựng... Bắt nguồn từ câu chuyện về hoàng đế Philippe Auguste (Philipe II) - Quốc vương đầu tiên của nước Pháp với tham vọng gây dựng...",
-      datetime: "31/03/2022 lúc 10:43 chiều"
-    }
-  ]
+      id: "P002",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P003",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P004",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P005",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P006",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P007",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P008",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P009",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P010",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P011",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P012",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P013",
+      img: FamilyImage,
+      gender: "female",
+      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+      workplace: "Gia đình",
+      price: "7.000.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employer",
+    },
+    {
+      id: "P014",
+      img: HouseHelperImage,
+      gender: "male",
+      name: "Nữ giúp việc - Lê Anh Tuấn",
+      firstName: "Tuấn",
+      lastName: "Lê Anh",
+      phoneNumber: "0938269974",
+      address: "64/15 Nguyên Hồng Phường 1 Gò Vấp",
+      workplace: "Gia đình, cá nhân, công ty",
+      price: "7.500.000đ",
+      generalAddress: "TP Hồ Chí Minh",
+      type: "employee",
+      expertise: ["Vệ sinh nhà cửa", "Chăm con cái"],
+      advantage: "Khỏe mạnh, thật thà, nhanh nhẹn",
+      experience: "1 năm"
+    },
+  ];
 
   return (
     <div className="news-mng">
       <h1>Quản lý bài viết</h1>
       <div className="news-mng-wrap">
-        <Link className="news-mng-create" to='/admin/news-create'>Tạo bài viết</Link>
+        <Link className="news-mng-create" to='/admin/post-create'>Tạo bài viết</Link>
         <div className="news-mng-search">
           <input type="text" placeholder="Tìm bài viết ..." />
           <FontAwesomeIcon className="news-mng-search--icon" icon={solid('search')} />
@@ -37,45 +172,31 @@ function NewsManagement() {
       <table>
         <thead>
           <tr>
-              <th>Tiêu đề</th>
-              <th>Tiêu đề phụ</th>
-              <th>Tác giả</th>
-              <th>Thời gian</th>
-              <th>Nội dung</th>
+              <th>PostId</th>
+              <th>Hình ảnh</th>
+              <th>Giới tính</th>
+              <th>Tên</th>
+              <th>Nơi làm việc</th>
+              <th>Tiền</th>
+              <th>Địa chỉ</th>
+              <th>Loại</th>
               <th></th>
           </tr>
         </thead>
         <tbody>
-          {listNews.map((news, i) => (
+          {postList.map((news, i) => (
             <tr key={i}>
-              <td>{news.title}</td>
-              {
-                news.subHeader.length > 100 ? (
-                  <td>
-                    {
-                      `${news.subHeader.substring(0, 100)}...`
-                    }
-                  </td>
-                ) : (
-                  <td>{news.subHeader}</td>
-                )
-              }
-              <td>{news.author}</td>
-              <td>{news.datetime}</td>
-              {
-                news.content.length > 100 ? (
-                  <td>
-                    {
-                      `${news.content.substring(0, 100)}...`
-                    }
-                  </td>
-                ) : (
-                  <td>{news.content}</td>
-                )
-              }
+              <td>{news.id}</td>
+              <td>{news.img}</td>
+              <td>{news.gender}</td>
+              <td>{news.name}</td>
+              <td>{news.workplace}</td>
+              <td>{news.price}</td>
+              <td>{news.generalAddress}</td>
+              <td>{news.type}</td>
               <td>
                 <FontAwesomeIcon icon={solid('eye')} />{"  "}
-                <Link to="/admin/news-update" style={{textDecoration: 'none', color: '#855446'}}>
+                <Link to="/admin/post-update" style={{textDecoration: 'none', color: '#855446'}}>
                   <FontAwesomeIcon icon={solid('pen')} />{"  "}
                 </Link>
                 <FontAwesomeIcon icon={solid('trash')} style={{cursor: 'pointer'}} onClick={e => setHideDeletePopup(true)}/>

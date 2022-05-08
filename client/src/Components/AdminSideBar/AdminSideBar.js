@@ -8,7 +8,7 @@ function AdminSideBar() {
   return (
     <div className="ad-sidebar">
       <div className="ad-sidebar__info">
-        <img src="" alt="avatar" />
+        <img src="https://via.placeholder.com/50" alt="avatar" />
         <h4>Duy An</h4>
       </div>
 
@@ -19,31 +19,23 @@ function AdminSideBar() {
         </Link>
         <Link to="/admin" className="ad-sidebar__line">
         </Link>
-        <Link to="/admin">
+        <Link to="/admin/post-management">
           <FontAwesomeIcon icon={solid("file")} />
           <p>Bài viết</p>
         </Link>
+        <Link to="/admin/user-management">
+          <FontAwesomeIcon icon={solid("user-gear")} />
+          <p>Thành viên</p>
+        </Link>        
         <Link to="/admin/response-management">
           <FontAwesomeIcon icon={solid("message")} />
           <p>Phản hồi</p>
-        </Link>        
-        <Link to="/admin/product-management">
-          <FontAwesomeIcon icon={solid("swatchbook")} />
-          <p>Sản phẩm</p>
         </Link>
-        <Link to="/admin/customer-management">
-          <FontAwesomeIcon icon={solid("user")} />
-          <p>Khách hàng</p>
+        <Link to="/admin/contract-management">
+          <FontAwesomeIcon icon={solid("file-signature")} />
+          <p>Hợp đồng</p>
         </Link>
-        <Link to="/admin/order-management">
-          <FontAwesomeIcon icon={solid("basket-shopping")} />
-          <p>Đơn hàng</p>
-        </Link>
-        <Link to="/admin/statistic">
-          <FontAwesomeIcon icon={solid("book-bookmark")} />
-          <p>Báo cáo</p>
-        </Link>
-        <Link to="/admin/settings">
+        <Link to="/admin/setting">
           <FontAwesomeIcon icon={solid("gear")} />
           <p>Cài đặt</p>
         </Link>

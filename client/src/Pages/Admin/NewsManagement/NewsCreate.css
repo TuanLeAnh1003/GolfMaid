@@ -13,18 +13,18 @@
 .news-create-wrapper > h1 {
   font-size: 24px;
   font-weight: bold;
-  color: #A78282;
+  color: #39A388;
 }
 
 .news-create-wrapper > p {
   margin-right: 150px;
   font-size: 16px;
-  color: #B4624A;
+  color: #39A388;
 }
 
 .news-create-form {
   padding-left: 20px;
-  border-left: 2px solid #B4624A;
+  border-left: 2px solid #4B6B58;
   width: 1100px;
 }
 
@@ -35,28 +35,49 @@
   margin: 20px 0;
 }
 
+.news-create-item > div {
+  /* padding-right: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  font-size: 20px;
+}
+
+.news-create-item > div > input {
+  margin-right: 10px;
+}
+
+.news-create-item > div > label {
+  margin-right: 50px;
+}
+
 .news-create-item > p {
   font-size: 20px;
   font-weight: bold;
-  color: #855446;
+  color: #4B6B58;
 }
 
 .news-create-item > input {
   width: 800px;
   height: 30px;
   outline: none;
-  border: 1px solid #786059;
+  border: 1px solid #4B6B58;
   border-radius: 10px;
-  background-color: #D7CECB;
+  background-color: #FCFDFC;
   color: #A99690;
   padding: 20px;
   font-size: 18px;
 }
 
+.news-create-item > input[type="file"] {
+  padding: 0;
+}
+
 .news-create-func > button {
   width: 120px;
   height: 40px;
-  background-color: #B4624A;
+  background-color: #7AAB8E;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -67,7 +88,7 @@
 }
 
 .news-create-func > button:hover {
-  background-color: #b97a67;
+  background-color: #94ab9d;
   cursor: pointer;
 }
 
@@ -75,8 +96,8 @@
   width: 120px;
   height: 40px;
   padding: 10px 40px;
-  background-color: #F1EAEA;
-  color: #9E7E74;
+  background-color: #CEE7D8;
+  color: #7AAB8E;
   font-size: 18px;
   font-weight: bold;
   border-radius: 10px;
@@ -86,7 +107,7 @@
 }
 
 .news-create-func--cancel:hover {
-  background-color: #dccece;
+  background-color: #ade8c5;
 
 }
 

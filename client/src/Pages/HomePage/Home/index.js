@@ -19,58 +19,8 @@ import newsItemImg3 from './../../../Assets/Images/news-item-3.svg';
 import newsItemImg4 from './../../../Assets/Images/news-item-4.svg';
 import NewsItem from '../../../Components/NewsItem';
 import bigImg2 from './../../../Assets/Images/big-img-2.png';
-
-const productList = [{
-  img: pro1,
-  name: "Rolex Oyster Perpetual",
-  type: ["silver", "bronze"],
-  price: "370.000.000 VNĐ",
-}, {
-  img: pro1,
-  name: "Rolex Oyster ",
-  type: ["silver", "bronze"],
-  price: "50.000.000 VNĐ",
-}, {
-  img: pro1,
-  name: "Rolex Oyster ",
-  type: ["silver", "bronze"],
-  price: "50.000.000 VNĐ",
-}, {
-  img: pro1,
-  name: "Rolex Oyster ",
-  type: ["silver", "bronze"],
-  price: "50.000.000 VNĐ",
-}, {
-  img: pro1,
-  name: "Rolex Oyster ",
-  type: ["silver", "bronze"],
-  price: "50.000.000 VNĐ",
-}, {
-  img: pro1,
-  name: "Rolex Oyster ",
-  type: ["silver", "bronze"],
-  price: "50.000.000 VNĐ",
-}, {
-  img: pro1,
-  name: "Rolex Oyster ",
-  type: ["silver", "bronze"],
-  price: "50.000.000 VNĐ",
-}, {
-  img: pro1,
-  name: "Rolex Oyster ",
-  type: ["silver", "bronze"],
-  price: "50.000.000 VNĐ",
-}, {
-  img: pro1,
-  name: "Rolex Oyster ",
-  type: ["silver", "bronze"],
-  price: "50.000.000 VNĐ",
-}, {
-  img: pro1,
-  name: "Rolex Oyster ",
-  type: ["silver", "bronze"],
-  price: "50.000.000 VNĐ",
-}]
+import FamilyImage from "./../../../Assets/Images/family-image.svg";
+import HouseHelperImage from "./../../../Assets/Images/house-helper.svg";
 
 const contactList = [
   {
@@ -117,6 +67,156 @@ const newsList = [
     desc: "Bạn quá bận rộn với công việc và không có nhiều thời gian dọn dẹp nhà cửa? Bạn muốn giữ cho không gian nhà ở của mình luôn sạch sẽ..."
   }
 ]
+
+const postList = [
+  {
+    id: "P001",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P002",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P003",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P004",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P005",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P006",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P007",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P008",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P009",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P010",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P011",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P012",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P013",
+    img: FamilyImage,
+    gender: "female",
+    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
+    workplace: "Gia đình",
+    price: "7.000.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employer",
+  },
+  {
+    id: "P014",
+    img: HouseHelperImage,
+    gender: "male",
+    name: "Nữ giúp việc - Lê Anh Tuấn",
+    firstName: "Tuấn",
+    lastName: "Lê Anh",
+    phoneNumber: "0938269974",
+    address: "64/15 Nguyên Hồng Phường 1 Gò Vấp",
+    workplace: "Gia đình, cá nhân, công ty",
+    price: "7.500.000đ",
+    generalAddress: "TP Hồ Chí Minh",
+    type: "employee",
+    expertise: ["Vệ sinh nhà cửa", "Chăm con cái"],
+    advantage: "Khỏe mạnh, thật thà, nhanh nhẹn",
+    experience: "1 năm"
+  },
+];
 
 function Home() {
   const [trans, setTrans] = useState(0);
@@ -194,28 +294,28 @@ function Home() {
         />
       </div>
 
-      {/* BÁN CHẠY */}
-      <h1>BÁN CHẠY</h1>
-      <div className="home__products-wrapper">
+      <h1>DANH SÁCH TÌM NGƯỜI GIÚP VIỆC</h1>
+      <div className="home__contracts-wrapper">
         <FontAwesomeIcon icon={solid('angle-left')} onClick={handleLeftClick}/>
         
-        <div className="home__products">
+        <div className="home__contracts">
           <ul 
-            className="home__product-wrap"
+            className="home__contract-wrap"
             style={{left: trans + "px"}}
             ref={move}
           >
-            {productList.map((item, index) => (
+            {postList.map((item, index) => (
               <li key={index}>
-                <div className="home__product-frame">
-                  <div className="home__product">
-                    <Post 
-                      ref={product}
-                      img={item.img}
-                      name={item.name}
-                      type={item.type}
-                      price={item.price}
-                    />
+                <div className="home__contract-frame">
+                  <div className="home__contract">
+                    <Post
+                        ref={product}
+                        img={item.img}
+                        name={item.name}
+                        type={item.type}
+                        price={item.price}
+                        address={item.generalAddress}
+                      />
                   </div>    
                 </div>
               </li>

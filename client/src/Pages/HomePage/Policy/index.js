@@ -80,7 +80,7 @@ function Policy() {
         </div>
         <div className="policy-body-heading">CHÍNH SÁCH TRUNG GIAN</div>
         <div className="policy-body-content">
-          <p>Người giúp việc và người thuê sẽ được ưu đãi chính sách giảm 40% lần đặt đầu tiên.</p>
+          <p>Phí giao dịch trung gian sẽ là 40% tổng giá trị hợp đồng.</p>
         </div>
       </div>
     </div>

@@ -29,9 +29,9 @@ function Admin() {
               <Route path='user-create' element={<UserCreate />} />
               <Route path='user-update' element={<UserUpdate />} />
               
-              <Route path='news-management' element={<NewsManagement />} />
-              <Route path='news-create' element={<NewsCreate />} />
-              <Route path='news-update' element={<NewsUpdate />} />
+              <Route path='post-management' element={<NewsManagement />} />
+              <Route path='post-create' element={<NewsCreate />} />
+              <Route path='post-update' element={<NewsUpdate />} />
             </Routes>
           </div>
 

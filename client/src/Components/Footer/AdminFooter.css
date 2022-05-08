@@ -1,6 +1,7 @@
 .ad-footer {
-  background-color: #F1EAEA;
+  background-color: #7AAB8E;
   /* width: calc(100vw - 200px); */
+  height: 80px;
 }
 
 .ad-footer > .ad-footer__logo {
@@ -13,6 +14,7 @@
 
 .ad-footer > .ad-footer__logo > img {
   margin-right: 10px;
+  height: 80px;
   object-fit: contain;
 }
 

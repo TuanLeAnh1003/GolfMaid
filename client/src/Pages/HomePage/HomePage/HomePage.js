@@ -8,7 +8,7 @@ import Contact from '../Contact';
 import Home from '../Home';
 import Policy from '../Policy';
 import PostDetail from '../PostDetail';
-import ResultSearchOrder from '../ResultSearchOrder';
+import ResultSearchContract from '../ResultSearchContract';
 import HouseHelper from '../HouseHelper';
 import Search from '../Search';
 import SearchContract from '../SearchContract';
@@ -31,7 +31,7 @@ function HomePage() {
       <Route path="/househelper/:type" element={<HouseHelper />} />
       <Route path="/post-detail/:postId" element={<PostDetail />} />
       <Route path="/search-contract" element={<SearchContract />} />
-      <Route path="/result-search-order" element={<ResultSearchOrder />} />
+      <Route path="/result-search-contract" element={<ResultSearchContract />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/search" element={<Search searchContent={searchContent} />} />
       <Route path="/policy" element={<Policy />} />

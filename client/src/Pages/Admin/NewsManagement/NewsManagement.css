@@ -20,7 +20,7 @@
   outline: none;
   font-size: 23px;
   color: #fff;
-  background-color: #B4624A;
+  background-color: #789E88;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -30,7 +30,7 @@
 }
 
 .news-mng-wrap > button:hover {
-  background-color: #b57e6d;
+  background-color: #789E88;
 }
 
 .news-mng-search {
@@ -40,21 +40,21 @@
   width: 430px;
   height: 60px;
   border-radius: 15px;
-  background-color: #D7CECB;
+  background-color: #CEE7D8;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .news-mng-search > input {
   border: none;
   outline: none;
-  background-color: #D7CECB;
-  color: #A38177;
+  background-color: #CEE7D8;
+  color: #000;
   margin-left: 20px;
   font-size: 20px;
 }
 
 .news-mng-search--icon {
-  color: #A38177;
+  color: #789E88;
   font-size: 26px;
   margin-right: 10px;
 }
@@ -85,14 +85,14 @@
 }
 
 .news-mng > table > thead {
-  background-color: #A38177;
+  background-color: #789E88;
   color: #FFDDB6;
   font-size: 20px;
 }
 
 .news-mng > table > tbody {
-  background-color: #F1EAEA;
-  color: #785044;
+  background-color: #E7E9E8;
+  color: #40634E;
 }
 
 .news-mng-delete-wrapper {
@@ -112,7 +112,7 @@
   height: 300px;
   margin: 0 auto;
   text-align: center;
-  background-color: #D7CECB;
+  background-color: #CEE7D8;
   position: relative;
   border-radius: 10px;
 }
@@ -120,7 +120,7 @@
 .news-mng-delete > h3 {
   width: 100%;
   height: 70px;
-  background-color: #786059;
+  background-color: #7AAB8E;
   font-size: 25px;
   color: #fff;
   display: flex;
@@ -152,7 +152,7 @@
   border: none;
   border-radius: 10px;
   color: #fff;
-  background-color: #AA918A;
+  background-color: #40634E;
   font-weight: bold;
   cursor: pointer;
 }
