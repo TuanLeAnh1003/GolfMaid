@@ -88,6 +88,8 @@ function Header({ parentSearch }) {
           <Link to="/househelper/list">NGƯỜI GIÚP VIỆC</Link>
           <Link to="/househelper/find">NGƯỜI THUÊ</Link>
           <Link to="/contact">LIÊN HỆ</Link>
+          <Link to="/employee-form">TÌM VIỆC</Link>
+          <Link to="/employer-form">TÌM GIÚP VIỆC</Link>
 
         </ul>
       </div>
