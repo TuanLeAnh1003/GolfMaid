@@ -26,11 +26,11 @@ const login = (req, res) => {
             token: token,
           });
         } else {
-          res.send("Sai mật khẩu!");
+          return res.send("Sai mật khẩu!");
         }
       });
     } else {
-      res.send("Chưa có người dùng");
+      return res.send("Chưa có người dùng");
     }
 
   })
@@ -49,12 +49,11 @@ const register = (req, res) => {
   
   UserModel.find({
     email: email,
-    password: password
   })
   .then(data => {
     if(data.length !== 0) {
       console.log(data);
-      res.send(data)
+      return res.send("Đã có tài khoản!");
     } else {
       console.log(data)
       var salt = 10;
@@ -70,7 +69,7 @@ const register = (req, res) => {
         })
         .then(data => {
           console.log(data);
-          res.json(data);
+          res.send(data);
         })
         .catch(err => console.log(err))
       })
@@ -80,7 +79,7 @@ const register = (req, res) => {
   })
   .catch(err => {
     console.log("err", err);
-    res.send(err);
+    return res.send(err);
   })
 }
 

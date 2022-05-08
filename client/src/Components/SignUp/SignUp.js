@@ -59,6 +59,15 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
         password: password,
       })
       .then(res => {
+        if(res==="Đã có tài khoản!") {
+          Swal.fire({
+            position: 'top-end',
+            icon: 'warning',
+            title: 'Đã có tài khoản!',
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
         Swal.fire({
           position: 'top-end',
           icon: 'success',

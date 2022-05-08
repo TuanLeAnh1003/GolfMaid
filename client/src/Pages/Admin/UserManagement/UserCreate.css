@@ -13,18 +13,18 @@
 .user-create-wrapper > h1 {
   font-size: 24px;
   font-weight: bold;
-  color: #A78282;
+  color: #39A388;
 }
 
 .user-create-wrapper > p {
   margin-right: 150px;
   font-size: 16px;
-  color: #B4624A;
+  color: #39A388;
 }
 
 .user-create-form {
   padding-left: 20px;
-  border-left: 2px solid #B4624A;
+  border-left: 2px solid #58896C;
   width: 640px;
 }
 
@@ -38,17 +38,17 @@
 .user-create-item > p {
   font-size: 20px;
   font-weight: bold;
-  color: #855446;
+  color: #4B6B58;
 }
 
 .user-create-item > input {
   width: 395px;
   height: 30px;
   outline: none;
-  border: 1px solid #786059;
+  border: 1px solid #7AAB8E;
   border-radius: 10px;
-  background-color: #D7CECB;
-  color: #A99690;
+  background-color: #FCFDFC;
+  color: #7AAB8E;
   padding: 20px;
   font-size: 18px;
 }
@@ -56,7 +56,7 @@
 .user-create-func > button {
   width: 120px;
   height: 40px;
-  background-color: #B4624A;
+  background-color: #7AAB8E;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -75,8 +75,8 @@
   width: 120px;
   height: 40px;
   padding: 10px 40px;
-  background-color: #F1EAEA;
-  color: #9E7E74;
+  background-color: #CEE7D8;
+  color: #7AAB8E;
   font-size: 18px;
   font-weight: bold;
   border-radius: 10px;

@@ -4,7 +4,7 @@ import './SettingOptions.css';
 function SettingOptions() {
   return (
     <div className="setting">
-      <h1>Tùy chọn tổng quan</h1>
+      <h1><b>Tùy chọn tổng quan</b></h1>
       <div className="setting__option">
         <p>Ngôn ngữ của trang:</p>
         <select name="language" id="language">

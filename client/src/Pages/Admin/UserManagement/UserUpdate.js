@@ -15,7 +15,7 @@ function UserUpdate() {
     <form className="user-create">
       <div className="user-create-wrapper">
         <h1>SỬA THÔNG TIN THÀNH VIÊN</h1>
-        <p>Sửa thông tin thành viên mới UITWatch ở đây</p>
+        <p>Sửa thông tin thành viên GolfMaid ở đây</p>
       </div>
       <div className="user-create-form">
         <div className="user-create-item">
