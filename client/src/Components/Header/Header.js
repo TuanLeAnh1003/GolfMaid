@@ -5,7 +5,6 @@ import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import
 import logo from '../../Assets/Images/lo-go.png';
 import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
-import AdminSignIn from '../AdminSignIn/AdminSignIn';
 import { Link } from "react-router-dom";
 
 function Header({ parentSearch }) {
@@ -72,19 +71,9 @@ function Header({ parentSearch }) {
             <Link to="/search-contract">Tra cứu đơn hàng</Link>
           </div>
 
-          <div className="header-first__more-item header-first__more-like">
-            <FontAwesomeIcon icon={solid('heart')} />
-            <Link to="/liked-products">Yêu thích</Link>
-          </div>
-
           <div className="header-first__more-item header-first__more-search" onClick={handleShowSignIn}>
             <FontAwesomeIcon icon={solid('user')} />
             <span>Đăng nhập</span>
-          </div>
-
-          <div className="header-first__more-item header-first__more-user" onClick={handleShowAdminSignIn}>
-            <FontAwesomeIcon icon={solid('circle-user')} />
-            <span>Quản lí</span>
           </div>
         </div>
       </div>
@@ -96,8 +85,8 @@ function Header({ parentSearch }) {
 
         <ul className="header-second__nav">
           <Link to="">GIỚI THIỆU</Link>
-          <Link to="/sale">NGƯỜI GIÚP VIỆC</Link>
-          <Link to="/saleoff">NGƯỜI THUÊ</Link>
+          <Link to="/househelper/list">NGƯỜI GIÚP VIỆC</Link>
+          <Link to="/househelper/find">NGƯỜI THUÊ</Link>
           <Link to="/contact">LIÊN HỆ</Link>
 
         </ul>
@@ -105,7 +94,6 @@ function Header({ parentSearch }) {
 
       {isSignInShowed && <SignIn handleShowSignIn1={childShowSignIn1} handleShowSignUp1={childShowSignUp1}/>} 
       {isSignUpShowed && <SignUp handleShowSignIn2={childShowSignIn2} handleShowSignUp2={childShowSignUp2}/>}
-      {isAdminSignInShowed && <AdminSignIn handleShowAdmSignIn={childShowAdmSignIn} />}
     </div>
   )
 }

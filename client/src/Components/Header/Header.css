@@ -65,6 +65,7 @@
 .header-second > .header-second__logo > img {
   margin-right: 10px;
   object-fit: contain;
+  margin-left: 80px;
 }
 
 .header-second > .header-second__logo > div {

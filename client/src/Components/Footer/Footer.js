@@ -17,17 +17,15 @@ function Footer() {
             <li><h3>VỀ CHÚNG TÔI</h3></li>
             <li></li>
             <li>Giới thiệu</li>
-            <li>Chi nhánh cửa hàng</li>
-            <li>Tuyển dụng</li>
+            <li>Gmail: golfmaid@gmail.com</li>
+            <li>Số điện thoại: 093269974</li>
           </ul>
 
           <ul className="footer-first__product">
-            <li><h3>SẢN PHẨM</h3></li>
+            <li><h3>NGƯỜI GIÚP VIỆC</h3></li>
             <li></li>
-            <li>Đồng hồ nam</li>
-            <li>Đồng hồ nữ</li>
-            <li>Phụ kiện</li>
-            <li>Sale-off</li>
+            <li>Người giúp việc nam</li>
+            <li>Người giúp việc nữ</li>
           </ul>
 
           <ul className="footer-first__help">
@@ -35,8 +33,7 @@ function Footer() {
             <li></li>
             <li><Link to="/contact" style={{textDecoration: "none", color: "#fff"}}>Liên hệ</Link></li>
             <li><Link to="/policy" style={{textDecoration: "none", color: "#fff"}}>Chính sách chung</Link></li>
-            <li><Link to="/search-contract" style={{textDecoration: "none", color: "#fff"}}>Tra cứu đơn hàng</Link></li>
-            <li>Tư vấn khách hàng</li>
+            <li><Link to="/search-contract" style={{textDecoration: "none", color: "#fff"}}>Tra cứu hợp đồng</Link></li>
           </ul>
 
           <ul className="footer-first__social-media">
@@ -52,7 +49,7 @@ function Footer() {
       </div>
 
       <div className="footer-second">
-        <p>Copyright 2022 © UITWatch.com</p>
+        <p>Copyright 2022 © GolfMaid</p>
         <div className="footer-second__payment-methods">
           <FontAwesomeIcon icon={brands('cc-visa')} />
           <FontAwesomeIcon icon={brands('cc-paypal')} />

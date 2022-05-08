@@ -11,7 +11,12 @@ import UserUpdate from '../UserManagement/UserUpdate';
 import AdminSideBar from './../../../Components/AdminSideBar/AdminSideBar';
 import AdminFooter from './../../../Components/Footer/AdminFooter';
 import AdminHeader from './../../../Components/Header/AdminHeader';
+import ContractManagement from '../ContractManagement';
+import ContractCreate from '../ContractManagement/ContractCreate';
+import ContractUpdate from '../ContractManagement/ContractUpdate';
+
 import './Admin.css';
+import CommentManagement from '../CommentManagement';
 
 
 function Admin() {
@@ -23,15 +28,22 @@ function Admin() {
         <div className='admin__col'>
           <div>
             <Routes>
-              <Route path='settings' element={<SettingOptions />} />
+              <Route path='setting' element={<SettingOptions />} />
               <Route path='admin-profile' element={<AdminProfile />} />
               <Route path='user-management' element={<UserManagement />} />
               <Route path='user-create' element={<UserCreate />} />
               <Route path='user-update' element={<UserUpdate />} />
               
+              <Route path='/*' element={<NewsManagement />}></Route>
               <Route path='post-management' element={<NewsManagement />} />
               <Route path='post-create' element={<NewsCreate />} />
               <Route path='post-update' element={<NewsUpdate />} />
+
+              <Route path='contract-management' element={<ContractManagement />} />
+              <Route path='contract-create' element={<ContractCreate />} />
+              <Route path='contract-update' element={<ContractUpdate />} />
+
+              <Route path='comment-management' element={<CommentManagement />}></Route>
             </Routes>
           </div>
 

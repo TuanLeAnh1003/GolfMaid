@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import './SignIn.css';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import Logo from '../../Assets/Images/logo.png';
+import React, { useState } from 'react';
+import Swal from "sweetalert2";
+import UserApi from '../../Apis/UserApi';
+import Logo from '../../Assets/Images/lo-go.png';
 import Facebook from '../../Assets/Images/SignIn_fb.png';
 import Google from '../../Assets/Images/SignIn_gg+.png';
-import UserApi from '../../Apis/UserApi';
-import { useStore, action } from '../../Store/StoreContext';
-import SweetAlert from 'sweetalert2-react';
-import Swal from "sweetalert2";
+import { action, useStore } from '../../Store/StoreContext';
+import './SignIn.css';
 
 function SignIn({handleShowSignIn1, handleShowSignUp1}) {
 

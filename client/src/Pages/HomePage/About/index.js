@@ -1,17 +1,13 @@
 import React from "react";
-import "./About.css";
-import watch from "./../../../Assets/Images/about.png";
-import watch1 from "./../../../Assets/Images/watch_about1.png";
+import Creator from "../../../Components/Creater/Creator";
 import about1 from "./../../../Assets/Images/about-1.png";
 import about2 from "./../../../Assets/Images/about-2.png";
-import about3 from "./../../../Assets/Images/about4.png";
-import intro from "./../../../Assets/Video/intro.mp4";
+import Anh from './../../../Assets/Images/Anh.png';
 import Dan from './../../../Assets/Images/Dan.png';
-import Tuan from './../../../Assets/Images/Tuan.png';
 import Hung from './../../../Assets/Images/Hung.png';
 import Qan from './../../../Assets/Images/Qan.png';
-import Anh from './../../../Assets/Images/Anh.png';
-import Creator from "../../../Components/Creater/Creator";
+import Tuan from './../../../Assets/Images/Tuan.png';
+import "./About.css";
 
 function About() {
 

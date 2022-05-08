@@ -26,7 +26,7 @@ function HomePage() {
     <div>
     <Header parentSearch={parentSearch} />
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/*" element={<Home />} />
       <Route path="/househelper" element={<HouseHelper />} />
       <Route path="/househelper/:type" element={<HouseHelper />} />
       <Route path="/post-detail/:postId" element={<PostDetail />} />

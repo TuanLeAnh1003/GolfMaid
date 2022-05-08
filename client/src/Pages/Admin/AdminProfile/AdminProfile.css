@@ -28,7 +28,7 @@
 .ad-pfl > .ad-pfl__cols > .ad-pfl__col-1 > .ad-pfl__field > input {
   width: 600px;
   height: 50px;
-  background-color: #EDE1DF;
+  background-color: #FCFDFC;
   border: 1px solid #000;
   padding-left: 10px;
   border-radius: 10px;
@@ -58,7 +58,7 @@
   width: 146px;
   height: 50px;
   padding: 0 10px;
-  background-color: #EDE1DF;
+  background-color: #FCFDFC;
   border: 1px solid #000;
   padding-left: 10px;
   border-radius: 10px;
@@ -74,7 +74,7 @@
 .ad-pfl > .ad-pfl__cols > .ad-pfl__col-1 > .ad-pfl__field > .ad-pfl__button > button {
   width: 150px;
   height: 50px;
-  background-color: #B4624A;
+  background-color: #7AAB8E;
   font-size: 20px;
   color: #fff;
   border-radius: 10px;

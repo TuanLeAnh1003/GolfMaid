@@ -1,26 +1,25 @@
-import React, { useState, useRef, useEffect } from 'react';
-import './Home.css';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
-import bigImg from './../../../Assets/Images/big-img.png';
+import React, { useEffect, useRef, useState } from 'react';
 import Advertisement from '../../../Components/Advertisement';
+import ContactItem from '../../../Components/ContactItem/index';
+import List from '../../../Components/List';
+import NewsItem from '../../../Components/NewsItem';
+import Post from '../../../Components/Post';
 import adImg1 from './../../../Assets/Images/ad-img-1.png';
 import adImg2 from './../../../Assets/Images/ad-img-2.png';
-import List from '../../../Components/List';
-import Post from '../../../Components/Post';
+import bigImg2 from './../../../Assets/Images/big-img-2.png';
+import bigImg from './../../../Assets/Images/big-img.png';
+import FamilyImage from "./../../../Assets/Images/family-image.svg";
+import HouseHelperImage from "./../../../Assets/Images/house-helper.svg";
 import listImg1 from './../../../Assets/Images/list-img-1.png';
 import listImg2 from './../../../Assets/Images/list-img-2.png';
 import listImg3 from './../../../Assets/Images/list-img-3.png';
-import pro1 from './../../../Assets/Images/Rectangle 11.png';
-import ContactItem from '../../../Components/ContactItem/index';
 import newsItemImg1 from './../../../Assets/Images/news-item-1.svg';
 import newsItemImg2 from './../../../Assets/Images/news-item-2.svg';
 import newsItemImg3 from './../../../Assets/Images/news-item-3.svg';
 import newsItemImg4 from './../../../Assets/Images/news-item-4.svg';
-import NewsItem from '../../../Components/NewsItem';
-import bigImg2 from './../../../Assets/Images/big-img-2.png';
-import FamilyImage from "./../../../Assets/Images/family-image.svg";
-import HouseHelperImage from "./../../../Assets/Images/house-helper.svg";
+import './Home.css';
 
 const contactList = [
   {

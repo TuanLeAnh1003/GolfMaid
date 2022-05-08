@@ -27,9 +27,9 @@ function AdminSideBar() {
           <FontAwesomeIcon icon={solid("user-gear")} />
           <p>Thành viên</p>
         </Link>        
-        <Link to="/admin/response-management">
+        <Link to="/admin/comment-management">
           <FontAwesomeIcon icon={solid("message")} />
-          <p>Phản hồi</p>
+          <p>Bình luận</p>
         </Link>
         <Link to="/admin/contract-management">
           <FontAwesomeIcon icon={solid("file-signature")} />

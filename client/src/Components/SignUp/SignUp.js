@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './SignUp.css';
-import Logo from '../../Assets/Images/logo.png';
+import Logo from '../../Assets/Images/lo-go.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import UserApi from '../../Apis/UserApi';
