@@ -10,9 +10,9 @@
   }
   .policy-body-heading {
     text-align: center;
-    background: #EEE6E3;
+    background: rgba(173, 222, 221, 0.5);
     height: 40px;
-    margin: 40px 100px 0px 100px;
+    margin: 40px 100px 20px 100px;
     border-radius: 2px;
     border-color: #000000;
     font-family: 'Inter';
@@ -21,7 +21,7 @@
     font-size: 25px;
     line-height: 30px;
     text-align: center;
-    color: #C16C53;
+    color: #39A388;
   }
   .policy-body-content{
     margin: 0px 100px 0px 100px;
@@ -30,4 +30,12 @@
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 150px;
+  }
+
+  ul > li {
+    list-style-position: inside;
+  }
+
+  b {
+    line-height: 40px;
   }

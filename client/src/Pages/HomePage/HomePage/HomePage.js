@@ -12,6 +12,8 @@ import ResultSearchOrder from '../ResultSearchOrder';
 import HouseHelper from '../HouseHelper';
 import Search from '../Search';
 import SearchContract from '../SearchContract';
+import EmployeeForm from '../EmployeeForm/EmployeeForm';
+import EmployerForm from '../EmployerForm/EmployerForm';
 
 function HomePage() {
   const [searchContent, setSearchContent] = useState('')
@@ -35,6 +37,9 @@ function HomePage() {
       <Route path="/policy" element={<Policy />} />
       <Route path="/account/:id" element={<Account />} />
       <Route path="/about" element={<About />} />
+      <Route path="/employee-form" element={<EmployeeForm />} />
+      <Route path="/employer-form" element={<EmployerForm />} />
+
     </Routes>
     <Footer />
     </div>

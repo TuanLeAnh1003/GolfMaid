@@ -2,105 +2,89 @@ import React from "react";
 import "./Policy.css";
 
 function Policy() {
+  return (
+    <div className="policy">
+      <div className="policy-body">
+        <div className="policy-body-title">CHÍNH SÁCH</div>
+        <div className="policy-body-heading">CHÍNH SÁCH NGƯỜI GIÚP VIỆC</div>
+        <div className="policy-body-content">
+          <div>
+            <b>Các trường hợp chấm dứt hợp đồng mà không phải báo trước::</b>
+            <ul>
+              <li>
+              Người lao động đơn phương chấm dứt hợp đồng lao động vì các lý do: Không được bố trí theo đúng công việc, địa điểm làm việc hoặc không được bảo đảm điều kiện làm việc theo thỏa thuận
 
-    return (
-        <div className='policy'>
-            <div className='policy-body'>
-                <div className='policy-body-title'>CHÍNH SÁCH
-                </div>
-                <div className='policy-body-heading'>CHÍNH SÁCH BẢO HÀNH
-                </div>
-                <div className='policy-body-content'>
-                    <div><b>Tất cả các đồng hồ khi bán ra đều kèm theo 2 phiếu bảo hành:</b>
-                    <ul><li>1 Phiếu Bảo Hành (hoặc Thẻ Bảo Hành/Sổ Bảo Hành) của hãng có giá trị bảo hành Quốc tế (Thời gian bảo hành tùy theo quy định của từng hãng).</li>
-                    <li>1 Phiếu Bảo Hành của Hải Triều (Sử dụng để được thay pin miễn phí vĩnh viễn & Hưởng chế độ bảo hành tăng thêm từ 1-4 năm của Hải Triều).</li>
-                    </ul>
-                    </div>
-                    <div><b>Ví dụ:</b> Đồng Hồ Citizen có chế độ bảo hành chính hãng: máy = 12 tháng, Pin = 12 tháng.
-                    <ul><li >Khi mua tại Hải Triều, Khách hàng sẽ được tặng thêm thời gian bảo hành từ 4 năm về máy. Pin = Vĩnh Viễn.</li>
-                    <li>Tổng cộng: Khi mua tại Hải Triều, đồng hồ Citizen sẽ được bảo hành máy = 05 năm, Pin = Vĩnh Viễn.</li>
-                    </ul>
-                    </div>
-                    <div><b>Lưu ý:</b> 
-                    <ul><li >Đối với sản phẩm còn trong thời gian bảo hành Quốc Tế: Quý khách có thể đem tới Hải Triều hoặc bất kỳ nhà trung tâm bảo hành nào của hãng được ghi trên phiếu để yêu cầu được kiểm tra đồng hồ.</li>
-                    <li>Đối với sản phẩm hết thời gian bảo hành Quốc Tế nhưng vẫn trong thời gian bảo hành tại Hải Triều: Quý khách đem đồng hồ kèm Phiếu Bảo Hành của Hải Triều tới bất kỳ chi nhánh nào của Hải Triều để được hướng dẫn và kiểm tra đồng hồ.</li>
-                    </ul>
-                    </div>
-                    <div><b>Điều Kiện Được Bảo Hành</b> 
-                    <ul><li >Bảo hành chỉ có giá trị khi đồng hồ có Phiếu bảo hành của hãng & Phiếu bảo hành của Hải Triều đi kèm, điền chính xác, đầy đủ các thông tin.</li>
-                    <li>Phiếu bảo hành phải còn nguyên vẹn, không rách, chấp vá, hoen ố, mờ nhạt.</li>
-                    <li>Còn trong thời gian bảo hành. Thời gian bảo hành được tính từ ngày mua có ghi trên Phiếu Bảo Hành.</li>
-                    <li>Chỉ bảo hành thay thế mới cho những linh kiện, phụ tùng bị hỏng – không thay thế bằng một chiếc đồng hồ khác.</li>
-                    </ul>
-                    </div>
-                    <div><b>Điều Kiện Không Được Bảo Hành</b> 
-                    <ul><li >Đồng hồ không có Phiếu bảo hành của hãng và Phiếu bảo hành của Hải Triều đi kèm.</li>
-                    <li>Các loại dây đeo, khoá, vỏ, màu xi, mặt số, mặt kiếng bị hỏng hóc, vỡ do sử dụng không đúng, tai nạn, lão hóa tự nhiên, va đập, … trong quá trình sử dụng.</li>
-                    <li>Hỏng hóc do hậu quả gián tiếp của việc sử dụng sai hướng dẫn của hãng có kèm theo đồng hồ.</li>
-                    <li>Trầy xước về dây hoặc mặt kiếng bị trầy xước, vỡ do va chạm trong quá trình sử dụng. </li>
-                    <li>Tự ý thay đổi máy móc bên trong, mở ra can thiệp sửa chữa trong thời gian còn bảo hành – Tại những nơi không phải là trung tâm của hãng.</li>
-                    </ul>
-                    </div>
-                </div>
-                <div className='policy-body-heading'>CHÍNH SÁCH ĐỔI TRẢ
-                </div>
-                <div className='policy-body-content'>
-                <div><b>Trong vòng 7 ngày kể từ ngày mua hàng từ UITWatch</b> Quý khách có thể yêu cầu đổi hàng hoàn toàn miễn phí. Thời hạn 7 ngày được tính theo dấu bưu điện khi Quý khách gửi sản phẩm về cho chúng tôi hoặc thời gian chúng tôi tiếp nhận yêu cầu trực tiếp (tại cửa hàng) của Quý khách. 
-                    <ul><li >Yêu cầu đổi hàng cần được thực hiện trong vòng 7 ngày kể từ ngày Quý khách nhận được hàng.</li>
-                    <li>Sản phẩm không có dấu hiệu đã qua sử dụng (còn đầy đủ keo dán bảo vệ chống trầy xước mặt đồng hồ, nắp đáy, dây..)</li>
-                    <li>Sản phẩm không bị dây bẩn, trầy xước, hư hỏng, dính hoá chất hoặc có dấu hiệu cạy mở.</li>
-                    <li>Các bộ phận, linh kiện, phụ kiện, tài liệu hướng dẫn sử dụng, tài liệu kỹ thuật, quà tặng kèm theo (nếu có), … </li>
-                    <li>Hộp đựng, bao bì đóng gói sản phẩm còn nguyên vẹn, không bị móp, rách, ố vàng, …</li>
-                    <li>Chỉ chấp nhận đổi 1 lần duy nhất.</li>
-                    </ul>
-                    </div>
-                </div>
-                <div className='policy-body-heading'>HƯỚNG DẪN MUA HÀNG
-                </div>
-                <div className='policy-body-content'>
-                <div>
-                    <div>Do đặc thù mặt hàng đồng hồ cao cấp nên chúng tôi khuyến khích Quý khách tới tham quan và mua sắm tại hệ thống đại lý cửa hàng của UITWatch.
-                    </div>
-                    <div>
-                    <b>Hệ Thống Chi Nhánh:</b>
-                    </div>
-                    <div>
-                    Trường hợp quý khách ở xa (khu vực không có hệ thống cửa hàng của UITWatch), không có thời gian tới cửa hàng, hay theo yêu cầu của quý khách - Để đảm bảo sự thuận tiện nhất cho quá trình mua hàng của Quý khách, UITWatch sẽ áp dụng hình thức giao hàng và thu tiền tận nhà (COD) (Quý khách chỉ phải trả tiền khi nhận được hàng)
-                    </div>
-                    <div>
-                    <ul>
-                    <li><b>Gọi Ngay:</b><span style={{color:'red'}}>1900.6777</span></li>
-                    </ul>
-                    </div>
-                </div>
-                </div>
-                <div className='policy-body-heading'>CHÍNH SÁCH GIAO HÀNG
-                </div>
-                <div className='policy-body-content'>
-                <p><strong>Chính sách giao nhận hàng:</strong></p>
-                <p>Đối với dịch vụ Ship COD, là hình thức thanh toán khi nhận hàng. Sau khi quý khách hàng cung cấp thông tin và địa chỉ, Nhân viên giao hàng sẽ giao sản phẩm và nhận tiền tận nơi theo yêu cầu của quý khách.</p>
-                <p><strong>Chính sách vận chuyển:</strong></p>
-                <p>Chính sách vận chuyển hàng hóa quy định đối tượng áp dụng, cách thức giao hàng, thời gian giao hàng và trách nhiệm của các bên liên quan đối với hàng hóa vận chuyển.</p>
-                <p><strong>1. Phạm vi áp dụng</strong></p>
-                <p>Chính sách vận chuyển áp dụng đối với các khách hàng không mua trực tiếp tại Showroom Casio Việt Nam.
-Sản phẩm được giao hàng bằng dịch vụ Chuyển phát nhanh và dịch vụ Ship hàng COD (thanh toán khi nhận hàng)  tới địa chỉ theo yêu cầu của khách hàng trên toàn quốc. Quý khách hàng được bóc hàng và kiểm tra hàng thoải mái trước khi quyết định thanh toán.</p>
-                <p><strong>2. Cách thức giao hàng</strong></p>
-                <p>Đối với dịch vụ chuyển phát nhanh: Quý khách thanh toán bằng cách chuyển khoản cho Casio Việt Nam qua một trong các tài khoản ngân hàng hiện có . Chúng tôi sẽ gửi sản phẩm cho quý khách bằng hình thức chuyển phát nhanh của bưu điện cho tất cả các địa chỉ trên toàn quốc một cách nhanh chóng và hoàn toàn miễn phí.
-Đối với dịch vụ ship COD, là hình thức thanh toán khi nhận hàng. Sau khi quý khách hàng cung cấp thông tin và địa chỉ, Nhân viên giao hàng sẽ giao sản phẩm và nhận tiền tận nơi theo yêu cầu của quý khách.</p>
-                <p><strong>3. Thời gian giao hàng</strong></p>
-                <p>Sản phẩm sẽ được giao trong vòng 24 giờ tại khu vực nội thành Hà Nội, TP Hồ Chí Minh bằng hình thức nhân viên giao hàng trực tiếp.
-Đối với khách hàng ở ngoại thành Hà Nội,TP Hồ Chí Minh, các Tỉnh/Thành phố khác chúng tôi sẽ giao hàng trong vòng 24-36 giờ bằng hình thức Chuyển phát nhanh và hình thức ship COD.Thời gian trên không tính các ngày lễ, ngày nghỉ.
-Ngoài các hình thức giao hàng thông thường trên, chúng tôi sẽ áp dụng chính sách giao hàng ngay lập tức theo thỏa thuận hoặc yêu cầu đặc biệt của khách hàng nếu có khả năng.  Ngoại trừ một số trường hợp khách quan, Chúng tôi có thể giao hàng chậm trễ so với thời gian cam kết do những điều kiện bất khả kháng như thời tiết xấu, điều kiện giao thông không thuận lợi, máy bay trễ chuyến, xe hỏng hóc trên đường giao hàng, trục trặc trong quá trình chờ xuất hàng.</p>
-                <p><strong>4. Trách nhiệm đối với hàng hóa vận chuyển</strong></p>
-                <p>Dịch vụ vận chuyển do Casio Việt Nam trực tiếp thực hiện hoặc được ủy quyền chúng tôi sẽ chịu trách nhiệm với hàng hóa và các rủi ro như mất mát hoặc hư hại của hàng hóa trong suốt quá trình vận chuyển hàng.</p>
-                <p>Khách hàng có trách nhiệm kiểm tra hàng hóa khi nhận hàng. Khi phát hiện hàng hóa bị hư hại, trầy xước, bể vỡ, mốp méo, hoặc sai mẫu mã so với hàng đã đặt mua thì ký xác nhận tình trạng hàng hóa với Nhân viên giao nhậnvà thông báo ngay cho chúng tôi để giải quyết.</p>
-                <p>Sau khi khách đã ký nhận hàng mà không ghi chú hoặc có ý kiến về hàng hóa, đồng nghĩa với việc Casio Việt Nam không có trách nhiệm với những yêu cầu đổi trả vì hư hỏng, trầy xước, bể vỡ, mốp méo, sai hàng hóa, vv… sau này.</p>
-                <p>Nếu dịch vụ vận chuyển do khách chỉ định hoặc nhờ người thân, bạn bè chuyển giúp thì khách hàng sẽ chịu trách nhiệm với hàng hóa và các rủi ro như mất mát hoặc hư hại của hàng hóa trong suốt quá trình vận chuyển hàng từ cửa hàng đến khách hàng. Trong trường hợp này khách hàng sẽ chịu trách nhiệm cước phí và các tổn thất liên quan.</p>
-                <p>Trong một số trường hợp nhạy cảm: giá trị đơn hàng quá lớn và thời gian, địa điểm giao hàng có khả năng nguy hiểm. Chúng tôi sẽ chủ động liên lạc với Quý khách để thống nhất lại thời gian giao hàng cụ thể.</p>
-                </div>
-            </div>
+              </li>
+              <li>
+              Không được trả đủ lương hoặc trả lương không đúng thời hạn
+              </li>
+              <li>Bị người sử dụng lao động ngược đãi, đánh đập hoặc có lời nói, hành vi nhục mạ, hành vi làm ảnh hưởng đến sức khỏe, nhân phẩm, danh dự
+              </li>
+              <li>Người sử dụng lao động cung cấp thông tin không trung thực
+              </li>
+            </ul>
+          </div>
+          <div>
+            <b>Mức lương theo công việc không được thấp hơn mức lương tối thiểu vùng:</b>
+            <ul>
+              <li>
+              Theo quy định tại Chương VI (trừ Điều 93) của Bộ luật Lao động, trong đó tiền lương của người lao động thỏa thuận trong hợp đồng lao động theo quy định tại khoản 1, khoản 2 Điều 90 của Bộ luật Lao động bao gồm mức lương theo công việc, phụ cấp lương và các khoản bổ sung khác nếu có.
+              </li>
+              <li>
+              Mức lương theo công việc bao gồm cả chi phí tiền ăn, ở của người lao động tại gia đình người sử dụng lao động (nếu có) không được thấp hơn mức lương tối thiểu vùng do Chính phủ công bố.
+              </li>
+              <li>Người sử dụng lao động và người lao động thỏa thuận mức chi phí ăn, ở hằng tháng của người lao động (nếu có), tối đa không quá 50% mức lương theo công việc ghi trong hợp đồng lao động.</li>
+            </ul>
+          </div>
+          <div>
+            <b>Được nghỉ bình quân 01 tháng ít nhất 04 ngày</b>
+            <ul>
+              <li>
+              Vào ngày làm việc bình thường, ngoài thời giờ làm việc thỏa thuận trong hợp đồng lao động theo quy định, người sử dụng lao động phải bảo đảm, tạo điều kiện cho người lao động được nghỉ ít nhất 8 giờ, trong đó có 6 giờ liên tục trong 24 giờ liên tục
+              </li>
+              <li>
+              Người lao động được nghỉ hằng tuần theo quy định tại Điều 111 của Bộ luật Lao động, trường hợp người sử dụng lao động không thể bố trí nghỉ hằng tuần thì phải bảo đảm cho người lao động được nghỉ tính bình quân 01 tháng ít nhất 04 ngày.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <b>Đảm bảo an toàn, vệ sinh lao động</b>
+            <ul>
+              <li>
+              Người sử dụng lao động có trách nhiệm hướng dẫn cách sử dụng máy, thiết bị, đồ dùng, các biện pháp phòng, chống cháy, nổ trong gia đình có liên quan đến công việc của người lao động; trang bị phương tiện bảo vệ cá nhân cho người lao động trong quá trình làm việc.
+              </li>
+              <li>
+              Khi người lao động bị tai nạn lao động, bệnh nghề nghiệp, người sử dụng lao động phải thực hiện các trách nhiệm đối với người lao động theo quy định tại Điều 38, Điều 39 của Luật An toàn, vệ sinh lao động.
+              </li>
+              <li>
+              Người lao động có trách nhiệm chấp hành đúng hướng dẫn sử dụng máy, thiết bị, đồ dùng và phòng, chống cháy, nổ; bảo đảm các yêu cầu vệ sinh môi trường của hộ gia đình, dân cư nơi cư trú.
+              </li>
+            </ul>
+          </div>
         </div>
-    );
+        <div className="policy-body-heading">HƯỚNG DẪN LIÊN HỆ</div>
+        <div className="policy-body-content">
+          <div>
+            <ul>
+              <li>
+              Sau khi tìm được công việc thích hợp hoặc người giúp việc thì bấm vào liên hệ ngay để liên hệ với bên còn lại.
+              </li>
+              <li>
+              Chúng tôi khuyến khích người giúp việc và người thuê gặp mặt trực tiếp để có thể dễ trao đổi và kí kết hợp đồng.
+              </li>
+              <li>
+              Trường hợp một trong hai bên ở xa hoặc không thể tham gia trực tiếp được thì chúng tôi sẽ chuẩn bị một phònghọp trên zoom để hai bên có thể trao đổi và ký kết hợp đồng.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="policy-body-heading">CHÍNH SÁCH TRUNG GIAN</div>
+        <div className="policy-body-content">
+          <p>Người giúp việc và người thuê sẽ được ưu đãi chính sách giảm 40% lần đặt đầu tiên.</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Policy;

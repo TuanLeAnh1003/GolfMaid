@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -32,9 +33,9 @@ function Footer() {
           <ul className="footer-first__help">
             <li><h3>HỖ TRỢ</h3></li>
             <li></li>
-            <li>Liên hệ</li>
-            <li>Chính sách chung</li>
-            <li>Tra cứu đơn hàng</li>
+            <li><Link to="/contact" style={{textDecoration: "none", color: "#fff"}}>Liên hệ</Link></li>
+            <li><Link to="/policy" style={{textDecoration: "none", color: "#fff"}}>Chính sách chung</Link></li>
+            <li><Link to="/search-contract" style={{textDecoration: "none", color: "#fff"}}>Tra cứu đơn hàng</Link></li>
             <li>Tư vấn khách hàng</li>
           </ul>
 
