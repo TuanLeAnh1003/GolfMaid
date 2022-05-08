@@ -7,7 +7,7 @@ function UserCreate() {
     <form className="user-create">
       <div className="user-create-wrapper">
         <h1>TẠO THÀNH VIÊN</h1>
-        <p>Tạo thành viên mới UITWatch ở đây</p>
+        <p>Tạo thành viên mới GolfMaid ở đây</p>
       </div>
       <div className="user-create-form">
         <div className="user-create-item">
