@@ -14,6 +14,7 @@ import Search from '../Search';
 import SearchContract from '../SearchContract';
 import EmployeeForm from '../EmployeeForm/EmployeeForm';
 import EmployerForm from '../EmployerForm/EmployerForm';
+import PrivateRoute from '../../../Routes/PrivateRoute';
 
 function HomePage() {
   const [searchContent, setSearchContent] = useState('')
@@ -35,7 +36,7 @@ function HomePage() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/search" element={<Search searchContent={searchContent} />} />
       <Route path="/policy" element={<Policy />} />
-      <Route path="/account/:id" element={<Account />} />
+      <Route path="/account/:id" element={<PrivateRoute><Account /></PrivateRoute>}></Route>
       <Route path="/about" element={<About />} />
       <Route path="/employee-form" element={<EmployeeForm />} />
       <Route path="/employer-form" element={<EmployerForm />} />

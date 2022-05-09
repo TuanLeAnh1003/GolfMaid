@@ -7,11 +7,11 @@ const initState = {
   userId: "",
   firstName: "",
   lastName: "",
+  image: "",
 };
 
 
 const LOGIN = "login";
-
 
 export const action = {
   login: (payload) => {
@@ -28,9 +28,13 @@ function reducer(state, action) {
     case LOGIN:
       localStorage.setItem("token", action.payload);
       const info = jwt_decode(action.payload);
+      console.log(info);
       return {
         ...state,
-        userId: info.userId,
+        userId: info.id.userId,
+        lastName: info.id.lastName,
+        firstName: info.id.firstName,
+        image: info.id.image,
       };
 
     default:
@@ -49,5 +53,18 @@ export function StoreProvider({ children }) {
 
 export const useStore = () => {
   const [state, dispatch] = useContext(StoreContext);
-  return [state, dispatch];
+  const isAuthen = () => {
+    const token = localStorage.getItem("token");
+    let isAuth = false;
+    if(token) {
+      try {
+        const info = jwt_decode(token);
+        return token.includes("Bearer ") && (info.id.userId !== undefined);
+      } catch (error) {
+        return false;
+      }
+    } 
+    return isAuth;
+  }
+  return [state, dispatch, isAuthen];
 };

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
@@ -6,6 +6,9 @@ import logo from '../../Assets/Images/lo-go.png';
 import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
 import { Link } from "react-router-dom";
+import { useStore } from "../../Store/useStore";
+import autoAvatar from '../../Assets/Images/avatarclone.jpg';
+import userApi from '../../Apis/UserApi'; 
 
 function Header({ parentSearch }) {
   const [isSignInShowed, setIsSignInShowed] = useState(false);
@@ -51,6 +54,14 @@ function Header({ parentSearch }) {
     parentSearch(searchInput)
   }
 
+  const [state, dispatch, isAuthen] = useStore();
+  const [user, setUser] = useState({})
+
+  useEffect(() => {
+    userApi.getMe({userId: localStorage.getItem("userid")})
+    .then(data => setUser({...data}));
+  }, [])
+
   return (
     <div className="header">
       <div className="header-first">
@@ -71,10 +82,17 @@ function Header({ parentSearch }) {
             <Link to="/search-contract">Tra cứu hợp đồng</Link>
           </div>
 
-          <div className="header-first__more-item header-first__more-search" onClick={handleShowSignIn}>
-            <FontAwesomeIcon icon={solid('user')} />
-            <span>Đăng nhập</span>
-          </div>
+          {isAuthen() 
+            ?<div className="header-first__more-item header-first__more-search user-button">
+              <p>Hi, {user.lastName} {user.firstName}</p>
+              <img className="user-avatar" src={user.image ? user.image : autoAvatar} />
+            </div>
+            :<div className="header-first__more-item header-first__more-search" onClick={handleShowSignIn}>
+              <FontAwesomeIcon icon={solid('user')} />
+              <span>Đăng nhập</span>
+            </div>
+          }
+          
         </div>
       </div>
 
