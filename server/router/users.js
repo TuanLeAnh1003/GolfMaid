@@ -12,5 +12,6 @@ router.put('/', updateUser);
 
 router.post('/register', user.register);
 router.post('/login', user.login);
+router.get('/getMe/:userId', user.getMe);
 
 export default router;

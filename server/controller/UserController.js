@@ -67,15 +67,8 @@ const register = (req, res) => {
           gender: req.body.gender,
           password: hash
         })
-        .then(data => {
-          console.log(data);
-          res.send(data);
-        })
-        .catch(err => console.log(err))
       })
-      .then(data => console.log("hash", hash))
     }
-
   })
   .catch(err => {
     console.log("err", err);
@@ -83,13 +76,17 @@ const register = (req, res) => {
   })
 }
 
-// const getMe = (req, res) => {
-//   console.log("get me");
-//   res.send("get me");
-// }
+const getMe = async (req, res) => {
+  console.log(req.params.userId);
+  let abc = await UserModel.find({
+    userId: req.params.userId
+  })
+  .then((data) => res.send(data[0]))
+  .cath(err => res.send(err))
+}
 
 export default {
   login,
   register,
-  // getMe,
+  getMe,
 } 
