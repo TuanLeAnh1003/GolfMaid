@@ -82,7 +82,7 @@ const getMe = async (req, res) => {
     userId: req.params.userId
   })
   .then((data) => res.send(data[0]))
-  .cath(err => res.send(err))
+  .catch(err => res.send(err))
 }
 
 export default {

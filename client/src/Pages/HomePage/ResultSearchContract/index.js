@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router'
 import ContractApi from '../../../Apis/ContractApi';
+import ReactToPrint from "react-to-print";
 
 
 function ResultSearchContract() {
@@ -14,12 +15,13 @@ function ResultSearchContract() {
   const contractId = contractInfo?.slice(contractInfo.indexOf('contractId=') + 11, contractInfo.indexOf('&'))
   const phoneNumber = contractInfo.slice(contractInfo.indexOf('&') + 13)
 
-  // useEffect(() => {
-  //   ContractApi.getContractByIdAndPhone({contractId: contractId, phoneNumber: phoneNumber})
-  //     .then(res => {
-  //       setContract(res)
-  //     })
-  // }, [])
+  useEffect(() => {
+    ContractApi.getContractByIdAndPhone({contractId: contractId, phoneNumber: phoneNumber})
+      .then(async (res) => {
+        console.log(res[0]);
+        setContract(res[0])
+      })
+  }, [])
 
   return (
     <div className="result-search-contract">
@@ -33,7 +35,7 @@ function ResultSearchContract() {
           <p>________________ o0o ________________</p>
         </div>
         <div className="result-search-contract__date">
-          Gò Vấp, ngày {contract?.create_at.getDate() || '09'} tháng {contract?.create_at.getMonth() || '05'} năm {contract?.create_at.getFullYear() || '2022'}
+          Gò Vấp, ngày {contract?.createdAt.slice(8,2) || '09'} tháng {contract?.createdAt.slice(6,2) || '05'} năm {contract?.createdAt.slice(0,4) || '2022'}
         </div>
         <div className="result-search-contract__title">HỢP ĐỒNG THUÊ GIÚP VIỆC</div>
         <div className="result-search-contract__content">
@@ -42,8 +44,8 @@ function ResultSearchContract() {
           <p>Người lao động: ông/bà <b>{contract?.employee}</b></p>
           <p>Thoả thuận ký kết hợp đồng lao động và cam kết làm đúng những điều khoản sau đây:</p>
           <p><b>Điều 1: Thời hạn và công việc hợp đồng</b></p>
-          <p>Bắt đầu làm việc từ ngày {contract?.startDate.getDate() || '09'} tháng {contract?.startDate.getMonth() || '05'} năm {contract?.startDate.getFullYear() || '2022'}</p>
-          <p>Kết thúc làm việc từ ngày {contract?.endDate.getDate() || '09'} tháng {contract?.endDate.getMonth() || '06'} năm {contract?.endDate.getFullYear() || '2022'}</p>
+          <p>Bắt đầu làm việc từ ngày {contract?.startDate.slice(8,2) || '09'} tháng {contract?.startDate.slice(6,2) || '05'} năm {contract?.startDate.slice(0,4) || '2022'}</p>
+          <p>Kết thúc làm việc từ ngày {contract?.endDate.slice(8,2) || '09'} tháng {contract?.endDate.slice(6,2) || '06'} năm {contract?.endDate.slice(0,4) || '2022'}</p>
           <p><b>Điều 2: Chế độ làm việc</b></p>
           <p>Thời giờ làm việc: {contract?.workingTime}</p>
           <p><b>Điều 3: Nghĩa vụ và quyền lợi của người lao động</b></p>
@@ -75,10 +77,10 @@ function ResultSearchContract() {
           <FontAwesomeIcon icon={solid("house")} />
           Trở về
         </Link>
-        <button className="result-search-contract--export">
+        <a className="result-search-contract--export" onClick={e => {e.preventDefault();window.print()}}>
           <FontAwesomeIcon icon={solid("print")} />
           In hợp đồng
-        </button>
+        </a>
       </div>
     </div>
   )
