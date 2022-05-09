@@ -1,19 +1,42 @@
-import React, { useState } from 'react'
-import './Account.css'
-import DuyAnAvatar from '../../../Assets/Images/DuyAnAvatar.jpg'
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState, useEffect } from 'react';
+import './Account.css';
+import DuyAnAvatar from '../../../Assets/Images/DuyAnAvatar.jpg';
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useParams } from 'react-router-dom';
+import userApi from '../../../Apis/UserApi';
+import autoAvatar from '../../../Assets/Images/avatarclone.jpg';
+
 
 function Account() {
-  var user = {
-    firstName: "Duy An",
-    lastName: "Nguyễn",
-    email: "nduyan1601@gmail.com",
-    phoneNumber: "0938269974",
-    gender: "male",
-    birthday: new Date("2001-01-16").toLocaleDateString('pt-PT'),
-    avatar: DuyAnAvatar,
+
+  const { id } = useParams();
+
+  const [user, setUser] = useState({})
+
+  useEffect(() => {
+    userApi.getMe({userId: localStorage.getItem("userid")})
+    .then(data => setUser({...data}));
+
+    // const listGender = document.querySelectorAll('.account-info-left-item-gender > input[name="gender"]');
+    // console.log(Array.from(listGender));
+    // listGender = Array.from(listGender);
+
+    // listGender.forEach((item, index) => {
+    //   if(item.attributes[index].value === user.gender) {
+    //     item.attributes[index].checked === true;
+    //   }
+    // })
+
+  }, []);
+
+  const handleLogOut = () => {
+    localStorage.removeItem("token");;
+    localStorage.removeItem("userId")
+    navigator('./');
+    // window.location.reload();
   }
+
 
   const [selectedImage, setSelectedImage] = useState(null)
 
@@ -28,7 +51,12 @@ function Account() {
         <div className="account-nav-update">
           <FontAwesomeIcon className="account-nav-update--icon" icon={solid("pen")} />
           <div className="account-nav-update--title">Sửa hồ sơ</div>
-        </div>
+        </div>    
+        <div className="account-nav-update">
+          <FontAwesomeIcon className="account-nav-update--icon" icon={solid("arrow-right-from-bracket")} />
+          <div className="account-nav-update--title logout" onClick={handleLogOut}>Đăng xuất</div>
+        </div>       
+
       </div>
 
       <form className="account-info">
@@ -55,9 +83,9 @@ function Account() {
             <div className="account-info-left-item">
               <label>Giới tính:</label>
               <div className="account-info-left-item-gender">
-                <input type="radio" name="gender" value="male"/><label> Nam</label>
-                <input type="radio" name="gender" value="female"/><label> Nữ</label>
-                <input type="radio" name="gender" value="other"/><label> Khác</label>
+                <input type="radio" name="gender" value="Nam"/><label> Nam</label>
+                <input type="radio" name="gender" value="Nữ"/><label> Nữ</label>
+                <input type="radio" name="gender" value="Khác"/><label> Khác</label>
               </div>
             </div>
             <div className="account-info-left-item">
@@ -75,7 +103,7 @@ function Account() {
           <div className="account-info-right">
             {
               (selectedImage === null) ? (
-                <img className="account-info-right-image" src={user.avatar} alt="" />
+                <img className="account-info-right-image" src={user.image ? user.image : autoAvatar} alt="" />
               ) : (
                 <img className="account-info-right-image" src={window.URL.createObjectURL(selectedImage)} alt="" />
               )

@@ -83,10 +83,10 @@ function Header({ parentSearch }) {
           </div>
 
           {isAuthen() 
-            ?<div className="header-first__more-item header-first__more-search user-button">
+            ?<Link to={`account/${user.userId}`} className="header-first__more-item header-first__more-search user-button">
               <p>Hi, {user.lastName} {user.firstName}</p>
               <img className="user-avatar" src={user.image ? user.image : autoAvatar} />
-            </div>
+            </Link>
             :<div className="header-first__more-item header-first__more-search" onClick={handleShowSignIn}>
               <FontAwesomeIcon icon={solid('user')} />
               <span>Đăng nhập</span>

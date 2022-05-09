@@ -139,3 +139,7 @@
 .account-info-submit:hover {
   background-color: #4fd07e;
 }
+
+.logout:hover {
+  cursor: pointer;
+}
