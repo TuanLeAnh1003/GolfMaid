@@ -9,12 +9,10 @@ mongoose.connect(`${URI}`);
 
 const schema = new mongoose.Schema({
   userId: {
-    type: 'string',
-    required: true
+    type: 'string'
   },
   password: {
-    type: 'string',
-    required: true
+    type: 'string'
   },
   firstName: { type: 'string', required: true },
   lastName: { type: 'string', required: true },

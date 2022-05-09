@@ -118,6 +118,11 @@
   margin-left: 10%;
 }
 
+.user-button {
+  text-decoration: none;
+  color: #fff;
+}
+
 .user-button > p {
   width: 135px;
   text-overflow: ellipsis;

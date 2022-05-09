@@ -1,4 +1,5 @@
-import { ContractModel } from "../Models/ContractModel.js"
+import { ContractModel } from "../Models/ContractModel.js";
+import crypto from 'crypto';
 
 export const getContracts = async (req, res) => {
   // const contract = new ContractModel({
@@ -25,9 +26,10 @@ export const getContracts = async (req, res) => {
 export const createContract = async (req, res) => {
   try {
     const newContract = req.body;
-
-    const contract = new ContractModel(newContract);
+    const idContract = crypto.randomBytes(3*4).toString("base64");
+    const contract = new ContractModel({...newContract, contractId: idContract});
     await contract.save();
+    console.log(contract);
 
     res.status(200).json(contract)
   } catch (err) {
