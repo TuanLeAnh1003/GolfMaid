@@ -31,10 +31,10 @@ function Account() {
   }, []);
 
   const handleLogOut = () => {
-    localStorage.removeItem("token");;
-    localStorage.removeItem("userId")
+    localStorage.removeItem("token");
+    localStorage.removeItem("userid");   
+    window.location.reload();
     navigator('./');
-    // window.location.reload();
   }
 
 

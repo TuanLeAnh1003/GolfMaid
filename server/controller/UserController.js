@@ -24,6 +24,7 @@ const login = (req, res) => {
           res.send({
             message: true,
             token: token,
+            data: data,
           });
         } else {
           return res.send("Sai mật khẩu!");
@@ -68,6 +69,7 @@ const register = (req, res) => {
           password: hash
         })
       })
+      res.send(data);
     }
   })
   .catch(err => {

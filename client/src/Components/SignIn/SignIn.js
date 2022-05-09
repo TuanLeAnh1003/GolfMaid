@@ -42,6 +42,7 @@ function SignIn({handleShowSignIn1, handleShowSignUp1}) {
         password: password,
       })
       .then(res => {
+        console.log(res.data);
         if(res.message) {
           dispatch(actions.login(res.token));
           Swal.fire({

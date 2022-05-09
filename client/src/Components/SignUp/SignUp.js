@@ -67,14 +67,16 @@ function SignUp({handleShowSignUp2, handleShowSignIn2}) {
             showConfirmButton: false,
             timer: 1500
           })
+        } else {
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Đăng kí thành công!',
+            showConfirmButton: false,
+            timer: 1500
+          });
         }
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Đăng kí thành công!',
-          showConfirmButton: false,
-          timer: 1500
-        })
+        
       })
       .catch(err => Swal.fire('Đăng kí thất bại!'))
     }
