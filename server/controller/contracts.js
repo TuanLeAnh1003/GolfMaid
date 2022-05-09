@@ -47,3 +47,29 @@ export const updateContract = async (req, res) => {
     console.log('err', err);
   }
 }
+
+export const getContractByIdAndPhone = async (req, res) => {
+  try {
+    const data = req.params.data
+    
+    const contractId = data?.slice(data.indexOf('contractId=') + 11, data.indexOf('&'))
+    const phoneNumber = data.slice(data.indexOf('&') + 13)
+    
+    console.log(contractId, phoneNumber);
+
+    await ContractModel.aggregate([{
+      $lookup: {
+        from: 'users',
+        localField: "author",
+        foreignField: "userId",
+        as: 'author'
+      }
+    }])
+
+  } catch (err) {
+    console.log('err', err);
+  }
+  
+
+  
+}

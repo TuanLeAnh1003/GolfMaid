@@ -34,6 +34,7 @@ function Footer() {
             <li><Link to="/contact" style={{textDecoration: "none", color: "#fff"}}>Liên hệ</Link></li>
             <li><Link to="/policy" style={{textDecoration: "none", color: "#fff"}}>Chính sách chung</Link></li>
             <li><Link to="/search-contract" style={{textDecoration: "none", color: "#fff"}}>Tra cứu hợp đồng</Link></li>
+            <li><Link to="/about" style={{textDecoration: "none", color: "#fff"}}>Về chúng tôi</Link></li>
           </ul>
 
           <ul className="footer-first__social-media">

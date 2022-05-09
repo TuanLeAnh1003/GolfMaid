@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './ResultSearchContract.css'
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom'
+import { useParams } from 'react-router'
+import ContractApi from '../../../Apis/ContractApi';
+
 
 function ResultSearchContract() {
-  const contract = {
-    create_at: new Date("2022-05-08"),
-    contractId: "CT001",
-    employer: "Lê Anh Tuấn",
-    employee: "Nguyễn Duy An",
-    startDate: new Date("2022-05-08"),
-    endDate: new Date("2022-06-08"),
-    workingTime: "1 tháng",
-    price: 7500000
-  }
+  const [contract, setContract] = useState()
+  const { contractInfo } = useParams()
+
+  const contractId = contractInfo?.slice(contractInfo.indexOf('contractId=') + 11, contractInfo.indexOf('&'))
+  const phoneNumber = contractInfo.slice(contractInfo.indexOf('&') + 13)
+
+  // useEffect(() => {
+  //   ContractApi.getContractByIdAndPhone({contractId: contractId, phoneNumber: phoneNumber})
+  //     .then(res => {
+  //       setContract(res)
+  //     })
+  // }, [])
 
   return (
     <div className="result-search-contract">
@@ -28,22 +33,22 @@ function ResultSearchContract() {
           <p>________________ o0o ________________</p>
         </div>
         <div className="result-search-contract__date">
-          Gò Vấp, ngày {contract.create_at.getDate()} tháng {contract.create_at.getMonth()} năm {contract.create_at.getFullYear()}
+          Gò Vấp, ngày {contract?.create_at.getDate() || '09'} tháng {contract?.create_at.getMonth() || '05'} năm {contract?.create_at.getFullYear() || '2022'}
         </div>
         <div className="result-search-contract__title">HỢP ĐỒNG THUÊ GIÚP VIỆC</div>
         <div className="result-search-contract__content">
-          <p>Mã Hợp đồng: <b>{contract.contractId}</b></p>
-          <p>Người sử dụng lao động: ông/bà <b>{contract.employer}</b></p>
-          <p>Người lao động: ông/bà <b>{contract.employee}</b></p>
+          <p>Mã Hợp đồng: <b>{contract?.contractId}</b></p>
+          <p>Người sử dụng lao động: ông/bà <b>{contract?.employer}</b></p>
+          <p>Người lao động: ông/bà <b>{contract?.employee}</b></p>
           <p>Thoả thuận ký kết hợp đồng lao động và cam kết làm đúng những điều khoản sau đây:</p>
           <p><b>Điều 1: Thời hạn và công việc hợp đồng</b></p>
-          <p>Bắt đầu làm việc từ ngày {contract.startDate.getDate()} tháng {contract.startDate.getMonth()} năm {contract.startDate.getFullYear()}</p>
-          <p>Kết thúc làm việc từ ngày {contract.endDate.getDate()} tháng {contract.endDate.getMonth()} năm {contract.endDate.getFullYear()}</p>
+          <p>Bắt đầu làm việc từ ngày {contract?.startDate.getDate() || '09'} tháng {contract?.startDate.getMonth() || '05'} năm {contract?.startDate.getFullYear() || '2022'}</p>
+          <p>Kết thúc làm việc từ ngày {contract?.endDate.getDate() || '09'} tháng {contract?.endDate.getMonth() || '06'} năm {contract?.endDate.getFullYear() || '2022'}</p>
           <p><b>Điều 2: Chế độ làm việc</b></p>
-          <p>Thời giờ làm việc: {contract.workingTime}</p>
+          <p>Thời giờ làm việc: {contract?.workingTime}</p>
           <p><b>Điều 3: Nghĩa vụ và quyền lợi của người lao động</b></p>
           <p>Quyền lợi:</p>
-          <p>Mức lương chính hoặc tiền công: {contract.price} đồng/tháng</p>
+          <p>Mức lương chính hoặc tiền công: {contract?.price} đồng/tháng</p>
           <p>Hình thức trả lương: Trả lương bằng tiền mặt.</p>
           <p>Nghĩa vụ:</p>
           <p>Hoàn thành những công việc đã cam kết trong hợp đồng lao động.</p>

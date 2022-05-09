@@ -44,3 +44,22 @@ export const updateComment = async (req, res) => {
     console.log('err', err);
   }
 }
+
+export const getCommentsByPostId = async (req, res) => {
+  const postId = req.params.postId;
+  try {
+    await CommentModel.aggregate([{
+      $lookup: {
+        from: 'users',
+        localField: "author",
+        foreignField: "userId",
+        as: 'author'
+      }
+    }]).exec((err, comments) => {
+      let filterComments = comments.filter((element) => element.postId === postId)
+      res.status(200).json(filterComments)
+    })
+  } catch (err) {
+    res.status(500).json({ error: err })
+  }
+}

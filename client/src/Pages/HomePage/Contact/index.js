@@ -26,7 +26,7 @@ function Contact() {
 			title: "EMAIL",
 			icon: "envelope",
 			content: [
-				"uitwatch@gmail.com",
+				"golfmaid@gmail.com",
 				"19522009@gm.uit.edu.vn",
 				"nduyan1601@gmail.com",
 			],

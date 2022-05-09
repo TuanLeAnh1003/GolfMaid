@@ -1,7 +1,8 @@
 .search-contract {
-  width: 780px;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
+  height: 300px;
 }
 
 .search-contract--title {
@@ -28,5 +29,7 @@
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
+  text-decoration: none;
+  padding: 10px 20px;
 }

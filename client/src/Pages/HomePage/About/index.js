@@ -80,14 +80,14 @@ function About() {
 
       <div className=" about-container-3">
         <div className="text-block-founder">
-          <h2 className="founder">ĐỘI NGŨ LÃNH ĐẠO UITWATCH</h2>
+          <h2 className="founder">ĐỘI NGŨ LÃNH ĐẠO GOLFMAID</h2>
           <div className="founder-line">
             <p>
-              Gặp gỡ nhau từ những ngày đầu tiên, UITWatch là một trong những
+              Gặp gỡ nhau từ những ngày đầu tiên, GolfMaid là một trong những
               chuỗi dữ án đã được hoàn thành bỡi những con người dưới đây. Với
               họ lĩnh vực thương mại điện tử là lĩnh vực mà họ luôn đánh giá cao
               và đâu từ tiền bạc lẫn thời gian, chất xám của mình để đưa
-              UITWatch phát triển và vươn tầm quốc tế.
+              GolfMaid phát triển và vươn tầm quốc tế.
             </p>
           </div>
 
@@ -111,7 +111,7 @@ function About() {
           <h1 className="foot-head">LIÊN HỆ VỚI CHÚNG TÔI</h1>
           <div>
             <p className="foot-line" style={{width: "70%", textAlign: "center", margin: "0 auto"}}>
-              Nếu có bất kỳ phản hồi gì về cửa hàng UITWatch. Hãy liên hệ với
+              Nếu có bất kỳ phản hồi gì về cửa hàng GolfMaid. Hãy liên hệ với
               chúng tôi để được giải đáp sớm nhất.
             </p>
           </div>

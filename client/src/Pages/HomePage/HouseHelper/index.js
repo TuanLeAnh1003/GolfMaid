@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './HouseHelper.css';
 import CategoryItem from '../../../Components/Category/CategoryItem/index';
 import Post from '../../../Components/Post/index';
@@ -7,9 +7,12 @@ import FamilyImage from './../../../Assets/Images/family-image.svg';
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import HouseHelperImage from './../../../Assets/Images/house-helper.svg'
+import PostApi from '../../../Apis/PostApi'
 
 function HouseHelper() {
   const { type } = useParams()
+  const [listHouseHelper, setListHouseHelper] = useState([])
+  const [listFindHouseHelper, setListFindHouseHelper] = useState([])
 
   const cateList = [
     {
@@ -127,64 +130,20 @@ function HouseHelper() {
     generalAddress: "TP Hồ Chí Minh"
   }]
 
-  const houseHelperList = [
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      workplace: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      workplace: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      workplace: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      workplace: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      workplace: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      workplace: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      workplace: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      workplace: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    }
-  ]
+  useEffect(() => {
+    PostApi.getListHouseHelper()
+      .then(res => {
+        setListHouseHelper(res)
+      })
+  }, [])
+
+  useEffect(() => {
+    PostApi.getListFindHouseHelper()
+      .then(res => {
+        console.log(res);
+        setListFindHouseHelper(res)
+      })
+  }, [])
 
   return (
     <div className="findHousehelper">
@@ -224,15 +183,15 @@ function HouseHelper() {
               <p className="findHousehelper__family-title">TUYỂN NGƯỜI GIÚP VIỆC MỚI NHẤT 2022</p>
               <div className="findHousehelper__family-list">
                 {
-                  familyList.map((element, index) => (
-                    <Link to={`/post-detail/${element.id}`} key={index} className="findHousehelper__family-list-item">
+                  listFindHouseHelper.map((element, index) => (
+                    <Link to={`/post-detail/${element.postId}`} key={index} className="findHousehelper__family-list-item">
                       <Post
-                        img= {element.img}
-                        name= {element.name}
-                        workplace= {element.workplace}
+                        img= {element.image}
+                        title= {element.title}
+                        workplace= {element.detail.workplace}
                         type= {element.type}
                         price= {element.price}
-                        address= {element.generalAddress}
+                        address= {element.author[0]?.address.general}
                       ></Post>
                     </Link>
                   ))
@@ -247,17 +206,17 @@ function HouseHelper() {
               <p className="findHousehelper__family-title">DANH SÁCH NGƯỜI GIÚP VIỆC MỚI NHẤT 2022</p>
               <div className="findHousehelper__family-list">
                 {
-                  houseHelperList.map((element, index) => (
-                    <div key={index} className="findHousehelper__family-list-item">
+                  listHouseHelper.map((element, index) => (
+                    <Link to={`/post-detail/${element.postId}`} key={index} className="findHousehelper__family-list-item">
                       <Post
-                        img= {element.img}
+                        img= {element.author[0]?.image}
                         name= {element.name}
                         type= {element.type}
-                        workplace= {element.workplace}
+                        workplace= {element.detail.workplace}
                         price= {element.price}
-                        address= {element.generalAddress}
+                        address= {element.author[0]?.address.general}
                       ></Post>
-                    </div>
+                    </Link>
                   ))
                 }
               </div>

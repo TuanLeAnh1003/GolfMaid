@@ -1,151 +1,48 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Post from '../../../Components/Post'
 import HouseHelperImage from './../../../Assets/Images/house-helper.svg'
 import FamilyImage from './../../../Assets/Images/family-image.svg';
+import PostApi from '../../../Apis/PostApi';
 import { Link } from 'react-router-dom'
 
 import './Search.css'
 
 function Search({searchContent}) {
   const [type, setType] = useState(0)
-  const houseHelperList = [
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    },
-    {
-      img: HouseHelperImage,
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      type: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh"
-    }
-  ]
+  const [listHouseHelper, setListHouseHelper] = useState([])
+  const [listFindHouseHelper, setListFindHouseHelper] = useState([])
 
-  const familyList = [{
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }, {
-    img: FamilyImage,
-    name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-    type: "Gia đình",
-    price: "7.000.000đ",
-    generalAddress: "TP Hồ Chí Minh"
-  }]
+  useEffect(() => {
+    let temp = []
+    PostApi.getListHouseHelper()
+      .then(res => {
+        for (let index = 0; index < res.length; index++) {
+          const title = res[index].title.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s/g, '').toLowerCase()
+          const search = searchContent.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s/g, '').toLowerCase()
+          if (title.includes(search)) {
+            temp.push(res[index])
+            console.log(temp);
+          }
+        }
+        setListHouseHelper(temp)
+      })
+  }, [type])
+
+  useEffect(() => {
+    let temp = []
+    PostApi.getListFindHouseHelper()
+    .then(res => {
+      for (let index = 0; index < res.length; index++) {
+        const title = res[index].title.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s/g, '').toLowerCase()
+        const search = searchContent.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s/g, '').toLowerCase()
+        if (title.includes(search)) {
+          temp.push(res[index])
+          console.log(temp);
+        }
+      }
+      setListFindHouseHelper(temp)
+    })
+  }, [type])
 
   return (
     <div className="search">
@@ -163,18 +60,18 @@ function Search({searchContent}) {
       {
         type === 0 ? (
           <>
-            <div className="search-title">TÌM THẤY {familyList.length} KẾT QUẢ CHO {searchContent}</div>
+            <div className="search-title">TÌM THẤY {listFindHouseHelper.length} KẾT QUẢ CHO {searchContent}</div>
             <div className="search-list">
               {
-                familyList.map((element, index) => (
+                listFindHouseHelper.map((element, index) => (
                   <div className="search-list-item">
                     <Post 
                       key={index} 
-                      img={element.img}
-                      name={element.name}
-                      type={element.type}
+                      img={element.image}
+                      title={element.title}
+                      workplace={element.detail.workplace}
                       price={element.price}
-                      address= {element.generalAddress}
+                      address= {element.author[0]?.address.general}
                     />
                   </div>
                 ))
@@ -183,18 +80,18 @@ function Search({searchContent}) {
           </>
         ) : (
           <>
-            <div className="search-title">TÌM THẤY {houseHelperList.length} KẾT QUẢ CHO {searchContent}</div>
+            <div className="search-title">TÌM THẤY {listHouseHelper.length} KẾT QUẢ CHO {searchContent}</div>
             <div className="search-list">
               {
-                houseHelperList.map((element, index) => (
+                listHouseHelper.map((element, index) => (
                   <div className="search-list-item">
                     <Post 
                       key={index} 
-                      img={element.img}
-                      name={element.name}
-                      type={element.type}
+                      img={element.author[0]?.image}
+                      title={element.title}
                       price={element.price}
-                      address= {element.generalAddress}
+                      workplace={element.detail.workplace}
+                      address= {element.author[0]?.address.general}
                     />
                   </div>
                 ))

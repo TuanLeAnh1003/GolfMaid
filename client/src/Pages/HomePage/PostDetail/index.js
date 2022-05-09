@@ -2,187 +2,30 @@ import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
+import CommentApi from '../../../Apis/CommentApi';
+import PostApi from '../../../Apis/PostApi';
 import Post from "../../../Components/Post";
-import FamilyImage from "./../../../Assets/Images/family-image.svg";
-import HouseHelperImage from "./../../../Assets/Images/house-helper.svg";
 import smallImg from "./../../../Assets/Images/post-detail-1.svg";
 import "./PostDetail.css";
 
 function PostDetail() {
+  const [listPost, setListPost] = useState([])
+  const [listComment, setListComment] = useState([])
   const postId = useParams();
-  const postList = [
-    {
-      id: "P001",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P002",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P003",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P004",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P005",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P006",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P007",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P008",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P009",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P010",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P011",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P012",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P013",
-      img: FamilyImage,
-      gender: "female",
-      name: "Chính chủ tuyển nữ giúp việc nhà ở lại",
-      workplace: "Gia đình",
-      price: "7.000.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employer",
-    },
-    {
-      id: "P014",
-      img: HouseHelperImage,
-      gender: "male",
-      name: "Nữ giúp việc - Lê Anh Tuấn",
-      firstName: "Tuấn",
-      lastName: "Lê Anh",
-      phoneNumber: "0938269974",
-      address: "64/15 Nguyên Hồng Phường 1 Gò Vấp",
-      workplace: "Gia đình, cá nhân, công ty",
-      price: "7.500.000đ",
-      generalAddress: "TP Hồ Chí Minh",
-      type: "employee",
-      expertise: ["Vệ sinh nhà cửa", "Chăm con cái"],
-      advantage: "Khỏe mạnh, thật thà, nhanh nhẹn",
-      experience: "1 năm"
-    },
-  ];
 
-  const commentList = [
-    {
-      commentId: "CM001",
-      author: "Duy An",
-      postId: "P001",
-      content:
-        "Người giúp việc tôi thuê được 3 tháng để chăm cho con tôi rồi, làm việc rất chuyên nghiệp và tử tế. ",
-    },
-    {
-      commentId: "CM002",
-      author: "Duy An",
-      postId: "P001",
-      content:
-        "Người giúp việc tôi thuê được 3 tháng để chăm cho con tôi rồi, làm việc rất chuyên nghiệp và tử tế. ",
-    },
-    {
-      commentId: "CM003",
-      author: "Duy An",
-      postId: "P001",
-      content:
-        "Người giúp việc tôi thuê được 3 tháng để chăm cho con tôi rồi, làm việc rất chuyên nghiệp và tử tế. ",
-    },
-  ];
+  useEffect(() => {
+    PostApi.getPostsAndAuthor()
+      .then(res => {
+        setListPost(res)
+      })
+  }, [])
+
+  useEffect(() => {
+    CommentApi.getCommentsByPostId({postId: postId.postId})
+      .then(res => {
+        setListComment(res)
+      })
+  }, [])
 
   // -------------------------
   const [trans1, setTrans1] = useState(0);
@@ -220,9 +63,9 @@ function PostDetail() {
 
   return (
     <div className='pro-detail'>
-      {postList.map(
+      {listPost.map(
         (element) =>
-          element.id === postId.postId && (
+          element.postId === postId.postId && (
             <>
               <ul className='pro-detail__type'>
                 <li>
@@ -241,7 +84,7 @@ function PostDetail() {
                   <>
                     <div className='pro-detail__brief'>
                       <div className='pro-detail__imgs'>
-                        <img src={element.img} alt='img' />
+                        <img src={element.image} alt='img' />
                         <div className='pro-detail__more-img'>
                           <img src={smallImg} alt='smallImg' />
                           <img src={smallImg} alt='smallImg' />
@@ -251,7 +94,7 @@ function PostDetail() {
                       </div>
 
                       <div className='pro-detail__more'>
-                        <h3>{element.name}</h3>
+                        <h3>{element.title}</h3>
                         <div className='pro-detail__status'>
                           <span>
                             Liên hệ: <b>0938269983</b> - Chị Duy An
@@ -261,20 +104,12 @@ function PostDetail() {
                           </span>
                         </div>
 
-                        <h3>{element.price}</h3>
+                        <h3>{element.price}đ</h3>
 
                         <div className='dotted-line'></div>
 
                         <p className='pro-detail__description'>
-                          Gia đình tôi đang cần 2 người : 1 người chăm bé và 1 người
-                          giúp việc nhà . Nhà chị gái tôi cần 1 người chăm mẹ nữa. Nhà
-                          tôi 1 trệt,1 lầu,1 lửng,diện tích 60m2 , nhà có 2 vợ chồng
-                          và 1 con. 1 đứa 10 tháng. Chị gái tôi đang chăm sóc mẹ già
-                          85 tuổi bị tai biến nhẹ đi lại hơi yếu, dạo này chị ấy bận
-                          công việc công ty không có thời gian chăm sóc bà cụ, nên chị
-                          của mình cũng cần 1 cô giúp việc chăm sóc mẹ nữa. Mình cần
-                          tìm cô giúp việc gia đình chủ yếu là nấu ăn,lau dọn nhà cửa,
-                          thật thà, sạch sẽ,..
+                          {element.content}
                         </p>
 
                         <div className='dotted-line'></div>
@@ -318,7 +153,7 @@ function PostDetail() {
                           </div>
                           <div className='pro-detail__info-first-item'>
                             <FontAwesomeIcon icon={solid("mars-and-venus")} />
-                            <p>Giới tính: {element.gender}</p>
+                            <p>Giới tính: {element.author[0]?.gender}</p>
                           </div>
                           <div className='pro-detail__info-first-item'>
                             <FontAwesomeIcon icon={solid("graduation-cap")} />
@@ -370,10 +205,10 @@ function PostDetail() {
                       
                       <div className="pro-detail__employee-profile">
                         <div className="pro-detail__employee-profile-left">
-                          <h2>{element.lastName} {element.firstName}</h2>
+                          <h2>{element.author[0].lastName} {element.author[0].firstName}</h2>
                           <div>
                             <FontAwesomeIcon icon={solid("mars-and-venus")} />
-                            <p>Giới tính: {element.gender === "male" ? "Nam" : "Nữ"}</p>
+                            <p>Giới tính: {element.author[0]?.gender === "male" ? "Nam" : "Nữ"}</p>
                           </div>
                           <div>
                             <FontAwesomeIcon icon={solid("cake-candles")} />
@@ -381,14 +216,14 @@ function PostDetail() {
                           </div>
                           <div>
                             <FontAwesomeIcon icon={solid("phone")} />
-                            <p>Số điện thoại: {element.phoneNumber}</p>
+                            <p>Số điện thoại: {element.author[0].phoneNumber}</p>
                           </div>
                           <div>
                             <FontAwesomeIcon icon={solid("location-dot")} />
-                            <p>Địa chỉ: {element.address}</p>
+                            <p>Địa chỉ: {element.author[0].address.general}</p>
                           </div>
                         </div>
-                        <img src={element.img} alt="profile-img" />
+                        <img src={element.author[0]?.image} alt="profile-img" />
                       </div>
 
                       <h3>MỤC TIÊU NGHỀ NGHIỆP</h3>
@@ -407,14 +242,12 @@ function PostDetail() {
                       <p>
                         Chuyên môn: 
                         <b>
-                          {
-                            element.expertise.map((ex) => ` ${ex}, `)
-                          }
+                          {element.detail.expertise}
                         </b>
                       </p>
-                      <p>Cơ sở làm việc: <b>{element.workplace}</b> </p>
-                      <p>Ưu điểm bản thân: <b>{element.advantage}</b> </p>
-                      <p>Thời gian kinh nghiệm: <b>{element.experience}</b> </p>
+                      <p>Cơ sở làm việc: <b>{element.detail.workplace}</b> </p>
+                      <p>Ưu điểm bản thân: <b>{element.detail.advantage}</b> </p>
+                      <p>Thời gian kinh nghiệm: <b>{element.detail.experience}</b> </p>
                     </div>
                     <div className="pro-detail__employee-top"></div>
                   </>
@@ -443,17 +276,17 @@ function PostDetail() {
               style={{ left: trans1 + "px" }}
               ref={move1}
             >
-              {postList.map((item, index) => (
+              {listPost.map((item, index) => (
                 <li key={index}>
                   <div className='pro-detail__product-frame'>
                     <div className='pro-detail__product'>
                       <Post
                         ref={product1}
-                        img={item.img}
-                        name={item.name}
+                        img={item.author[0]?.image || "https://via.placeholder.com/200"}
+                        title={item.title}
                         type={item.type}
                         price={item.price}
-                        address={item.generalAddress}
+                        address={item.author[0]?.address.general}
                       />
                     </div>
                   </div>
@@ -470,11 +303,11 @@ function PostDetail() {
       <div className='pro-detail__comments'>
         <div className='pro-detail__comments-left'>
           <h3>BÌNH LUẬN</h3>
-          {commentList.map(
+          {listComment.map(
             (comment, i) =>
               comment.postId === postId.postId && (
                 <div className='pro-detail__comment' key={i}>
-                  <h4>{comment.author}</h4>
+                  <h4>{comment.author[0]?.lastName || 'Nguyễn'} {comment.author[0]?.firstName || 'Duy An'}</h4>
                   {Array(5)
                     .fill()
                     .map((_, i) => (
@@ -491,15 +324,15 @@ function PostDetail() {
         <form className='pro-detail__comments-right'>
           <h3>Thêm đánh giá</h3>
           <p>Bình luận của bạn*</p>
-          <textarea type='text' />
+          <textarea type='text' name='content'/>
           <div className='pro-detail__comments-right-wrapper'>
             <div>
               <p>Tên*</p>
-              <input type='text' />
+              <input type='text' name='firstName'/>
             </div>
             <div>
               <p>Email*</p>
-              <input type='text' />
+              <input type='text' name='email'/>
             </div>
           </div>
           <input type='submit' value='Gửi đi' />

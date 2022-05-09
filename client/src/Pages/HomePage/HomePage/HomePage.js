@@ -31,7 +31,7 @@ function HomePage() {
       <Route path="/househelper/:type" element={<HouseHelper />} />
       <Route path="/post-detail/:postId" element={<PostDetail />} />
       <Route path="/search-contract" element={<SearchContract />} />
-      <Route path="/result-search-contract" element={<ResultSearchContract />} />
+      <Route path="/result-search-contract/:contractInfo" element={<ResultSearchContract />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/search" element={<Search searchContent={searchContent} />} />
       <Route path="/policy" element={<Policy />} />
