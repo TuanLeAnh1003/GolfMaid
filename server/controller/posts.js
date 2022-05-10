@@ -1,5 +1,5 @@
-import { PostModel } from "../Models/PostModel.js"
-import { UserModel } from "../Models/UserModel.js"
+import { PostModel } from "../models/PostModel.js"
+import { UserModel } from "../models/UserModel.js"
 
 export const getPosts = async (req, res) => {
   // const post = new PostModel({

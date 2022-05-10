@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
-import {UserModel} from '../Models/UserModel.js';
-import {TokenModel} from '../Models/TokenModel.js';
+import {UserModel} from '../models/UserModel.js';
+import {TokenModel} from '../models/TokenModel.js';
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
 

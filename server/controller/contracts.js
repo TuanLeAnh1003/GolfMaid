@@ -1,4 +1,4 @@
-import { ContractModel } from "../Models/ContractModel.js";
+import { ContractModel } from "../models/ContractModel.js";
 import crypto from 'crypto';
 
 export const getContracts = async (req, res) => {
