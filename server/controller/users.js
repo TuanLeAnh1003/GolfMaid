@@ -43,10 +43,9 @@ export const createUser = async (req, res) => {
 
 export const updateUser = async (req, res) => {
   try {
-    const updateUser = req.body;
+    const updatedUser = req.body;
 
-    const user = await UserModel.findOneAndUpdate({ id: updateUser.userId}, updateUser, { new: true });
-
+    const user = await UserModel.findOneAndUpdate({ userId: updatedUser.userId}, updatedUser, { new: true });
 
     res.status(200).json(user)
   } catch (err) {
