@@ -21,11 +21,11 @@ const login = (req, res) => {
           TokenModel.create({
             token: token,
           })
-          res.send({
-            message: true,
-            token: token,
-            data: data,
-          });
+            res.send({
+              message: true,
+              token: token,
+              data: data,
+            });
         } else {
           return res.send("Sai mật khẩu!");
         }
