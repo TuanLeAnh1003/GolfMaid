@@ -19,6 +19,7 @@ function AdminSideBar() {
   const handleAdminSignOut = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userid");navigate('/');
+    localStorage.removeItem("role");
     window.location.reload();
     
   }
