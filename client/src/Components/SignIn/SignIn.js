@@ -51,10 +51,16 @@ function SignIn({handleShowSignIn1, handleShowSignUp1}) {
             title: 'Đăng nhập thành công!',
             showConfirmButton: false,
             timer: 1500
-          });
+          });          
           handleExitSignIn();
-          window.location.reload();
-          console.log(state.userId, state.firstName, state.lastName);
+          if(res.data.role) {
+            navigate("/admin");
+          } else {
+            // window.location.reload();
+          }
+
+          
+
         } else {
           Swal.fire({
             position: 'top',
