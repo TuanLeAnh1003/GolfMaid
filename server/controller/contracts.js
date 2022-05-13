@@ -55,7 +55,7 @@ export const getContractByIdAndPhone = async (req, res) => {
     const data = req.params.data
     
     const contractId = data?.slice(data.indexOf('contractId=') + 11, data.indexOf('&'))
-    const phoneNumber = data.slice(data.indexOf('&') + 13)
+    const phoneNumber = data?.slice(data.indexOf('&') + 13)
     
     await ContractModel.aggregate([{
       $lookup: {
@@ -65,7 +65,7 @@ export const getContractByIdAndPhone = async (req, res) => {
         as: 'employeeInfo'
       }
     }]).exec((err, contracts) => {
-      let filterContract = contracts.filter(element => element.contractId === contractId && element.employeeInfo[0].phoneNumber === phoneNumber)
+      let filterContract = contracts.filter(element => element.contractId === contractId)
       res.status(200).json(filterContract)
       console.log(filterContract);
     })
