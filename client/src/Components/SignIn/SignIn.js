@@ -54,12 +54,12 @@ function SignIn({handleShowSignIn1, handleShowSignUp1}) {
           });          
           handleExitSignIn();
           if(res.data.role) {
+            localStorage.setItem('role', true);
             navigate("/admin");
           } else {
-            // window.location.reload();
+            localStorage.setItem('role', false);
+            window.location.reload();
           }
-
-          
 
         } else {
           Swal.fire({
