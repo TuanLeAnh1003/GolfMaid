@@ -1,5 +1,6 @@
 import { PostModel } from "../models/PostModel.js"
 import { UserModel } from "../models/UserModel.js"
+import crypto from 'crypto';
 
 export const getPosts = async (req, res) => {
   // const post = new PostModel({
@@ -28,12 +29,23 @@ export const getPosts = async (req, res) => {
 
 export const createPost = async (req, res) => {
   try {
-    const newPost = req.body;
+    // const newPost = req.body;
 
-    const post = new PostModel(newPost);
-    await post.save();
+    // const post = new PostModel(newPost);
+    // await post.save();
 
-    res.status(200).json(post)
+    const post = PostModel.create({
+      postId: crypto.randomBytes(3*4).toString("base64"),
+      author: req.body.author,
+      title: req.body.title,
+      detail: req.body.detail,
+      price: req.body.price,
+      content: req.body.content,
+      type: req.body.type,
+      image: req.body.image
+    })
+    res.send(post)
+
   } catch (err) {
     console.log('err', err);
   }
